@@ -1,0 +1,432 @@
+{
+  "metadata": {
+    "name": "Matriz inicial de fontes, regras, alertas e scores para monitoramento Airbnb",
+    "created_by": "ChatGPT",
+    "created_at": "2026-06-03",
+    "repository": "cspgabriel/monitoramento-airbnb",
+    "folder": "arquivos ChatGPT",
+    "warning": "Material técnico e informativo. Regras jurídicas devem ser revisadas por profissional habilitado antes de uso automatizado ou aplicação de sanções."
+  },
+  "principles": [
+    "Monitorar a operação, não vigiar o hóspede.",
+    "Não gravar áudio.",
+    "Não permitir câmera interna.",
+    "Não usar câmera oculta.",
+    "Não usar reconhecimento facial ou biometria sem revisão jurídica robusta.",
+    "Todo alerta deve ter fonte, evidência, confiança e ação recomendada.",
+    "Inferência não é prova.",
+    "Decisões críticas exigem revisão humana.",
+    "Dados pessoais devem seguir minimização, finalidade, transparência, segurança, prevenção e retenção limitada.",
+    "Fonte oficial prevalece sobre fonte secundária."
+  ],
+  "source_types": [
+    "official_airbnb_policy",
+    "federal_law",
+    "municipal_law",
+    "court_decision",
+    "regulator_guidance",
+    "condo_rule",
+    "contract",
+    "academic_reference",
+    "news_or_clipping",
+    "manual_evidence"
+  ],
+  "sources": [
+    {
+      "id": "airbnb_3061_devices",
+      "name": "Airbnb - Cameras, recording devices, noise decibel monitors, and smart home devices",
+      "type": "official_airbnb_policy",
+      "jurisdiction": "global_airbnb",
+      "url": "https://www.airbnb.com/help/article/3061",
+      "topics": ["privacy", "cameras", "recording_devices", "noise_monitors", "smart_home_devices"],
+      "use_in_product": "Bloquear câmera interna, câmera oculta, gravação de áudio e validar divulgação de dispositivos permitidos.",
+      "requires_legal_review": false
+    },
+    {
+      "id": "airbnb_2914_privacy_security",
+      "name": "Airbnb - Privacy and security policy reference",
+      "type": "official_airbnb_policy",
+      "jurisdiction": "global_airbnb",
+      "url": "https://www.airbnb.com/help/article/2914",
+      "topics": ["privacy", "security", "disclosure"],
+      "use_in_product": "Complementar regras de privacidade, segurança e transparência sobre dispositivos.",
+      "requires_legal_review": false
+    },
+    {
+      "id": "airbnb_2704_disruptive_gatherings",
+      "name": "Airbnb - Disruptive gatherings and events policy",
+      "type": "official_airbnb_policy",
+      "jurisdiction": "global_airbnb",
+      "url": "https://www.airbnb.com/help/article/2704",
+      "topics": ["parties", "events", "noise", "community_disturbance"],
+      "use_in_product": "Gerar regras de risco de festa, ruído, lixo, estacionamento, fumo, vandalismo e perturbação comunitária.",
+      "requires_legal_review": false
+    },
+    {
+      "id": "airbnb_3280_party_risk",
+      "name": "Airbnb - How we assess risk for disruptive parties",
+      "type": "official_airbnb_policy",
+      "jurisdiction": "global_airbnb",
+      "url": "https://www.airbnb.com/help/article/3280",
+      "topics": ["party_risk", "risk_assessment", "booking_risk"],
+      "use_in_product": "Inspirar score preventivo de risco de reunião disruptiva, sem criar decisões opacas ou discriminatórias.",
+      "requires_legal_review": true
+    },
+    {
+      "id": "airbnb_3290_neighborhood_support",
+      "name": "Airbnb - Neighborhood Support",
+      "type": "official_airbnb_policy",
+      "jurisdiction": "global_airbnb",
+      "url": "https://www.airbnb.com/help/article/3290",
+      "topics": ["neighbor_support", "complaints", "community"],
+      "use_in_product": "Inspirar portal de vizinhança e fluxo de ocorrência.",
+      "requires_legal_review": false
+    },
+    {
+      "id": "airbnb_2894_guest_ground_rules",
+      "name": "Airbnb - Ground rules for guests",
+      "type": "official_airbnb_policy",
+      "jurisdiction": "global_airbnb",
+      "url": "https://www.airbnb.com/help/article/2894",
+      "topics": ["guests", "house_rules", "checkout", "community"],
+      "use_in_product": "Converter regras de hóspede em checklist, alertas e mensagens pré-check-in.",
+      "requires_legal_review": false
+    },
+    {
+      "id": "airbnb_2895_host_ground_rules",
+      "name": "Airbnb - Ground rules for Hosts",
+      "type": "official_airbnb_policy",
+      "jurisdiction": "global_airbnb",
+      "url": "https://www.airbnb.com/help/article/2895",
+      "topics": ["hosts", "listing_accuracy", "cleanliness", "communication", "checkin"],
+      "use_in_product": "Auditar precisão do anúncio, limpeza, comunicação, check-in e segurança.",
+      "requires_legal_review": false
+    },
+    {
+      "id": "br_lgpd_13709",
+      "name": "Brasil - Lei Geral de Proteção de Dados Pessoais, Lei nº 13.709/2018",
+      "type": "federal_law",
+      "jurisdiction": "BR",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
+      "topics": ["LGPD", "personal_data", "privacy", "security", "retention"],
+      "use_in_product": "Modelar finalidade, base legal, minimização, retenção, segurança, transparência e direitos do titular.",
+      "requires_legal_review": true
+    },
+    {
+      "id": "br_codigo_civil_10406",
+      "name": "Brasil - Código Civil, Lei nº 10.406/2002",
+      "type": "federal_law",
+      "jurisdiction": "BR",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+      "topics": ["condominium", "neighborhood", "property", "quiet_enjoyment", "safety"],
+      "use_in_product": "Base para regras de vizinhança, condomínio, sossego, salubridade, segurança, convenção, regimento e multas.",
+      "requires_legal_review": true
+    },
+    {
+      "id": "br_lei_inquilinato_8245",
+      "name": "Brasil - Lei do Inquilinato, Lei nº 8.245/1991",
+      "type": "federal_law",
+      "jurisdiction": "BR",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8245.htm",
+      "topics": ["seasonal_rental", "real_estate_lease"],
+      "use_in_product": "Apoiar enquadramento de locação por temporada e separação entre locação, hospedagem e operação profissional.",
+      "requires_legal_review": true
+    },
+    {
+      "id": "br_lei_geral_turismo_11771",
+      "name": "Brasil - Lei Geral do Turismo, Lei nº 11.771/2008",
+      "type": "federal_law",
+      "jurisdiction": "BR",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/lei/l11771.htm",
+      "topics": ["tourism", "hospitality", "cadastur"],
+      "use_in_product": "Avaliar quando operação pode demandar revisão como meio de hospedagem ou prestador turístico.",
+      "requires_legal_review": true
+    },
+    {
+      "id": "br_cdc_8078",
+      "name": "Brasil - Código de Defesa do Consumidor, Lei nº 8.078/1990",
+      "type": "federal_law",
+      "jurisdiction": "BR",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
+      "topics": ["consumer", "advertising", "service_failure", "refunds"],
+      "use_in_product": "Apoiar alertas de anúncio impreciso, falha de serviço, reembolso, limpeza, segurança e evidência de atendimento.",
+      "requires_legal_review": true
+    },
+    {
+      "id": "br_anpd",
+      "name": "Brasil - Autoridade Nacional de Proteção de Dados",
+      "type": "regulator_guidance",
+      "jurisdiction": "BR",
+      "url": "https://www.gov.br/anpd/pt-br",
+      "topics": ["LGPD", "regulator", "guidance", "privacy"],
+      "use_in_product": "Fonte de guias, boas práticas e atualizações sobre proteção de dados.",
+      "requires_legal_review": true
+    },
+    {
+      "id": "eu_reg_2024_1028",
+      "name": "European Union - Regulation (EU) 2024/1028 on short-term accommodation rental services data collection and sharing",
+      "type": "regulator_guidance",
+      "jurisdiction": "EU",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1028/oj",
+      "topics": ["short_term_rental", "registration", "data_sharing", "platforms"],
+      "use_in_product": "Benchmark para cadastro de unidade, número de registro, autoridade competente e compartilhamento de dados.",
+      "requires_legal_review": false
+    },
+    {
+      "id": "nyc_ose_registration",
+      "name": "NYC Office of Special Enforcement - Short-Term Rental Registration Law",
+      "type": "regulator_guidance",
+      "jurisdiction": "NYC_USA",
+      "url": "https://www.nyc.gov/site/specialenforcement/registration-law/registration.page",
+      "topics": ["short_term_rental", "registration", "prohibited_buildings"],
+      "use_in_product": "Benchmark para módulo de registro municipal, lista de prédios proibidos e validação de anúncios.",
+      "requires_legal_review": false
+    }
+  ],
+  "severity_levels": [
+    {
+      "id": "P0",
+      "name": "Crítico",
+      "description": "Risco imediato de violação grave, privacidade, segurança, suspensão, multa ou irregularidade relevante.",
+      "response_sla": "immediate"
+    },
+    {
+      "id": "P1",
+      "name": "Alto",
+      "description": "Risco relevante com possibilidade de correção rápida.",
+      "response_sla": "same_day"
+    },
+    {
+      "id": "P2",
+      "name": "Médio",
+      "description": "Pendência, inconsistência, reincidência ou risco operacional que deve entrar no fluxo de tarefas.",
+      "response_sla": "within_3_days"
+    },
+    {
+      "id": "P3",
+      "name": "Oportunidade",
+      "description": "Melhoria de performance, experiência, receita ou clareza operacional.",
+      "response_sla": "planned"
+    }
+  ],
+  "rules": [
+    {
+      "id": "rule_no_indoor_camera",
+      "name": "Bloquear câmera interna",
+      "category": "privacy_devices",
+      "source_ids": ["airbnb_3061_devices", "br_lgpd_13709"],
+      "condition": "device.is_internal == true && device.records_video == true",
+      "severity": "P0",
+      "confidence_default": 95,
+      "human_review_required": true,
+      "recommended_action": "Remover ou desativar o dispositivo, registrar evidência e revisar anúncio/disclosure antes de nova hospedagem."
+    },
+    {
+      "id": "rule_no_audio_recording",
+      "name": "Bloquear gravação de áudio",
+      "category": "privacy_devices",
+      "source_ids": ["airbnb_3061_devices", "br_lgpd_13709"],
+      "condition": "device.records_audio == true",
+      "severity": "P0",
+      "confidence_default": 95,
+      "human_review_required": true,
+      "recommended_action": "Remover gravação de áudio, revisar LGPD e registrar decisão no Evidence Vault."
+    },
+    {
+      "id": "rule_no_hidden_camera",
+      "name": "Bloquear câmera oculta",
+      "category": "privacy_devices",
+      "source_ids": ["airbnb_3061_devices"],
+      "condition": "device.is_hidden == true && device.records_video == true",
+      "severity": "P0",
+      "confidence_default": 95,
+      "human_review_required": true,
+      "recommended_action": "Remover imediatamente, abrir revisão crítica de privacidade e bloquear anúncio até correção."
+    },
+    {
+      "id": "rule_noise_monitor_disclosure_missing",
+      "name": "Decibelímetro não divulgado",
+      "category": "privacy_devices",
+      "source_ids": ["airbnb_3061_devices"],
+      "condition": "device.type == 'noise_decibel_monitor' && device.is_disclosed_to_guest == false",
+      "severity": "P1",
+      "confidence_default": 90,
+      "human_review_required": false,
+      "recommended_action": "Atualizar anúncio e aviso ao hóspede com localização e finalidade do monitor de decibéis, sem gravação de áudio."
+    },
+    {
+      "id": "rule_party_active_noise_complaint",
+      "name": "Possível festa ou perturbação em andamento",
+      "category": "party_disturbance",
+      "source_ids": ["airbnb_2704_disruptive_gatherings", "airbnb_3290_neighborhood_support"],
+      "condition": "reservation.is_active == true && noise.peak_detected == true && neighbor_complaint.exists == true",
+      "severity": "P0",
+      "confidence_default": 85,
+      "human_review_required": true,
+      "recommended_action": "Acionar operador, contatar hóspede, registrar evidência, verificar segurança e documentar resolução."
+    },
+    {
+      "id": "rule_quiet_hours_violation",
+      "name": "Violação de horário de silêncio",
+      "category": "party_disturbance",
+      "source_ids": ["airbnb_2704_disruptive_gatherings", "br_codigo_civil_10406"],
+      "condition": "noise.peak_detected == true && condo.quiet_hours_active == true",
+      "severity": "P1",
+      "confidence_default": 80,
+      "human_review_required": true,
+      "recommended_action": "Enviar alerta ao operador e mensagem preventiva ao hóspede; registrar se houver reincidência."
+    },
+    {
+      "id": "rule_condo_restriction_short_term_rental",
+      "name": "Restrição condominial para locação curta",
+      "category": "legal_condo",
+      "source_ids": ["br_codigo_civil_10406"],
+      "condition": "condo.short_term_rental_allowed == false || condo.short_term_rental_status == 'restricted'",
+      "severity": "P1",
+      "confidence_default": 75,
+      "human_review_required": true,
+      "recommended_action": "Revisar convenção, regimento, atas e jurisprudência aplicável antes de publicar ou manter o anúncio."
+    },
+    {
+      "id": "rule_municipal_registration_missing",
+      "name": "Registro municipal obrigatório ausente",
+      "category": "legal_registration",
+      "source_ids": ["eu_reg_2024_1028", "nyc_ose_registration"],
+      "condition": "city.registration_required == true && property.registration_number == null",
+      "severity": "P0",
+      "confidence_default": 85,
+      "human_review_required": true,
+      "recommended_action": "Bloquear status de conformidade, solicitar registro/licença e validar regra municipal em fonte oficial."
+    },
+    {
+      "id": "rule_listing_amenity_mismatch",
+      "name": "Comodidade anunciada não confirmada",
+      "category": "listing_accuracy",
+      "source_ids": ["airbnb_2895_host_ground_rules", "br_cdc_8078"],
+      "condition": "listing.amenity_claimed == true && inspection.amenity_confirmed == false",
+      "severity": "P1",
+      "confidence_default": 80,
+      "human_review_required": false,
+      "recommended_action": "Corrigir anúncio ou resolver a pendência da comodidade antes do próximo check-in."
+    },
+    {
+      "id": "rule_health_cleanliness_negative_review",
+      "name": "Review menciona risco de limpeza ou saúde",
+      "category": "cleanliness_safety",
+      "source_ids": ["airbnb_2895_host_ground_rules", "br_cdc_8078"],
+      "condition": "review.contains_any(['mofo', 'mold', 'praga', 'pest', 'barata', 'dirty', 'sujo', 'sujeira', 'bedbug'])",
+      "severity": "P1",
+      "confidence_default": 70,
+      "human_review_required": true,
+      "recommended_action": "Abrir tarefa de inspeção/limpeza/manutenção, anexar evidências e responder ao hóspede conforme política."
+    },
+    {
+      "id": "rule_checkin_instructions_missing",
+      "name": "Instruções de check-in ausentes ou inválidas",
+      "category": "operations",
+      "source_ids": ["airbnb_2895_host_ground_rules"],
+      "condition": "reservation.checkin_within_24h == true && listing.checkin_instructions_status != 'valid'",
+      "severity": "P1",
+      "confidence_default": 85,
+      "human_review_required": false,
+      "recommended_action": "Atualizar instruções de check-in, testar código/acesso e confirmar envio ao hóspede."
+    },
+    {
+      "id": "rule_privacy_retention_missing",
+      "name": "Atividade de tratamento sem retenção definida",
+      "category": "lgpd_privacy",
+      "source_ids": ["br_lgpd_13709", "br_anpd"],
+      "condition": "data_processing_activity.retention_period == null",
+      "severity": "P1",
+      "confidence_default": 90,
+      "human_review_required": true,
+      "recommended_action": "Definir prazo de retenção, finalidade, base legal e responsável pela atividade de tratamento."
+    }
+  ],
+  "score_components": [
+    {
+      "id": "legal_registration_risk",
+      "name": "Legal & Registration Risk",
+      "inputs": ["municipal_registration_status", "license_status", "condo_restriction_status", "document_validity"],
+      "weight": 20
+    },
+    {
+      "id": "privacy_lgpd_risk",
+      "name": "Privacy & LGPD Risk",
+      "inputs": ["device_compliance", "data_processing_compliance", "retention_status", "privacy_notice_status"],
+      "weight": 20
+    },
+    {
+      "id": "party_disturbance_risk",
+      "name": "Party & Disturbance Risk",
+      "inputs": ["reservation_risk", "noise_events", "neighbor_complaints", "repeat_incidents"],
+      "weight": 15
+    },
+    {
+      "id": "condo_neighbor_risk",
+      "name": "Condo & Neighbor Risk",
+      "inputs": ["condo_rules", "fines", "complaints", "visitor_policy"],
+      "weight": 15
+    },
+    {
+      "id": "listing_accuracy_risk",
+      "name": "Listing Accuracy Risk",
+      "inputs": ["amenity_mismatch", "photos_age", "house_rules_status", "checkin_status"],
+      "weight": 10
+    },
+    {
+      "id": "cleanliness_safety_risk",
+      "name": "Cleanliness & Safety Risk",
+      "inputs": ["cleaning_status", "maintenance_status", "negative_review_topics", "sensor_alerts"],
+      "weight": 10
+    },
+    {
+      "id": "reputation_revenue_risk",
+      "name": "Reputation & Revenue Risk",
+      "inputs": ["rating_trend", "negative_review_rate", "occupancy_trend", "revenue_trend"],
+      "weight": 10
+    }
+  ],
+  "alert_statuses": [
+    "open",
+    "acknowledged",
+    "in_review",
+    "waiting_external_info",
+    "resolved",
+    "dismissed_false_positive",
+    "closed_with_action"
+  ],
+  "evidence_types": [
+    "official_source",
+    "policy_rule",
+    "condo_document",
+    "sensor_event",
+    "neighbor_report",
+    "review_text",
+    "inspection_photo",
+    "maintenance_ticket",
+    "reservation_metadata",
+    "manual_note"
+  ],
+  "recommended_database_tables": [
+    "properties",
+    "listings",
+    "reservations",
+    "condominiums",
+    "condo_rules",
+    "sources",
+    "policy_rules",
+    "alerts",
+    "evidence_items",
+    "devices",
+    "device_disclosures",
+    "data_processing_activities",
+    "neighbor_reports",
+    "incidents",
+    "tasks",
+    "checklists",
+    "reviews",
+    "revenue_metrics",
+    "audit_logs"
+  ]
+}
