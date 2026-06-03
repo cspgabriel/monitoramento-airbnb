@@ -27,7 +27,7 @@ docs/sdd/
 
 ## Fluxo (brownfield — 7 passos)
 
-1. **Analisar o código existente** → feito (painel HTML + acervo de 113 documentos).
+1. **Analisar o código existente** → feito (painel HTML + acervo de 129 documentos).
 2. **Inicializar a estrutura SDD** → esta pasta.
 3. **Gerar a constituição a partir do código** → [`constitution.md`](constitution.md).
 4. **Escolher estratégia de integração** → evolução incremental, sem reescrita.

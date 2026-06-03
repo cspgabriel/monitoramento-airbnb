@@ -7,7 +7,7 @@
 
 Painel web de arquivo único que consolida e torna navegável todo o material do repositório
 sobre regulação do Airbnb/curta temporada no Brasil: normas federais e municipais,
-jurisprudência do STJ, artigos, clippings e o acervo de 113 documentos.
+jurisprudência do STJ, artigos, clippings e o acervo de 129 documentos.
 
 ## 2. Personas
 
@@ -23,7 +23,7 @@ jurisprudência do STJ, artigos, clippings e o acervo de 113 documentos.
 - **US3** Como usuário, quero **buscar em tudo de uma vez** por um campo único no topo.
 - **US4** Como usuário, quero **filtrar** registros por âmbito, status, município e categoria.
 - **US5** Como usuário, quero **abrir uma ficha detalhada** de cada norma/decisão com ementa, impacto e link ao documento original.
-- **US6** Como pesquisador, quero **acessar os 113 documentos** do acervo agrupados por categoria, com link direto.
+- **US6** Como pesquisador, quero **acessar os 129 documentos** do acervo agrupados por categoria, com link direto.
 - **US7** Como usuário, quero **ver a cronologia** (1991→2026) da regulação.
 - **US8** Como usuário em celular, quero a interface **responsiva** e **imprimível**.
 
@@ -36,7 +36,7 @@ jurisprudência do STJ, artigos, clippings e o acervo de 113 documentos.
 | RF3 | Modais detalhados com ementa, impacto, fundamentos e botões de documento/fonte. | ✅ |
 | RF4 | Aba **Artigos & Análises** com 5 itens e link externo às fontes. | ✅ |
 | RF5 | Aba **Clippings** com aviso editorial, categorias (habitação, crime, segurança, lavagem, condomínio, tributário, social) e filtros. | ✅ |
-| RF6 | Aba **Acervo**: 113 documentos agrupados por subpasta, com link relativo e extensão. | ✅ |
+| RF6 | Aba **Acervo**: 129 documentos agrupados por subpasta, com link relativo e extensão. | ✅ |
 | RF7 | **Busca global** que indexa registros, artigos, clippings e acervo. | ✅ |
 | RF8 | **Cronologia** em linha do tempo com 15 marcos. | ✅ |
 | RF9 | Contadores/estatísticas no cabeçalho (clippings contado dinamicamente). | ✅ |
@@ -59,7 +59,7 @@ jurisprudência do STJ, artigos, clippings e o acervo de 113 documentos.
 - [x] Cada aba alterna sem recarregar a página e rola para o topo.
 - [x] A busca global (≥2 caracteres) retorna resultados das 4 origens e abre o item.
 - [x] Todos os botões "📄 Abrir documento" apontam para arquivos que **existem** no repo
-      (validado: 9/9 referências de modal + 113/113 do acervo).
+      (validado: 9/9 referências de modal + 129/129 do acervo).
 - [x] O contador de clippings do cabeçalho corresponde ao número de cards renderizados.
 - [x] HTML estruturalmente balanceado e JS sem erro de sintaxe (validado).
 

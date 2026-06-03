@@ -14,7 +14,7 @@ Legenda: ✅ concluída · ⬜ pendente
 - ✅ T08 — Aba **Todos os Registros**: tabela unificada e filtros por âmbito.
 - ✅ T09 — Aba **Cronologia**: 15 marcos de 1991 a 2026.
 - ✅ T10 — Aba **Clippings**: aviso editorial + cards categorizados + filtros (incl. novos clippings do material complementar: golpes, mortes/gás, lavagem, estudo de crime, Operação Litus).
-- ✅ T11 — Aba **Acervo**: gerar manifesto dos 113 documentos e render agrupado por subpasta.
+- ✅ T11 — Aba **Acervo**: gerar manifesto dos 129 documentos e render agrupado por subpasta.
 - ✅ T12 — Modais (20) com ementa, impacto e botões para documento do acervo / fonte oficial.
 - ✅ T13 — **Busca global** indexando registros, artigos, clippings e acervo.
 - ✅ T14 — Correções de CSS do protótipo (seletores `.summary-card.c-* .num` quebrados) e contador dinâmico de clippings.
@@ -22,7 +22,7 @@ Legenda: ✅ concluída · ⬜ pendente
 
 ## Validação
 
-- ✅ T16 — Conferir que todos os caminhos de documento existem (9/9 modais + 113/113 acervo).
+- ✅ T16 — Conferir que todos os caminhos de documento existem (9/9 modais + 129/129 acervo).
 - ✅ T17 — Validar sintaxe do JS e o balanceamento de `<section>`/modais.
 
 ## Procedimento de manutenção (repetível)
@@ -34,14 +34,15 @@ Ao adicionar/remover arquivos em `legislacao-brasil/` ou `clippings/`, rode na r
 ```bash
 python3 - <<'PY'
 import os, json, urllib.parse, re
-roots = ["legislacao-brasil", "clippings"]
-labels = {"legislacao-brasil":"Legislação","clippings":"Clipping"}
+roots = ["legislacao-brasil", "clippings", "arquivos ChatGPT/materiais-brutos-sharepoint"]
+labels = {"legislacao-brasil":"Legislação","clippings":"Clipping","arquivos ChatGPT":"Material SharePoint"}
+exts = (".pdf",".docx",".xlsx",".pptx")
 items = []
 for root in roots:
     for dp, dirs, files in os.walk(root):
         dirs.sort()
         for fn in sorted(files):
-            if not fn.lower().endswith((".pdf",".docx")): continue
+            if not fn.lower().endswith(exts): continue
             parts = os.path.join(dp, fn).split(os.sep)
             y = re.search(r"(19|20)\d{2}", "/".join(parts))
             items.append({
@@ -57,7 +58,7 @@ PY
 ```
 
 Substitua o bloco `const ACERVO=[…];` dentro do `<script>` em `index.html` pela saída.
-Atualize também o número **113** no cabeçalho, na Visão Geral e no texto da aba Acervo.
+Atualize também o número **129** no cabeçalho, na Visão Geral e no texto da aba Acervo.
 
 ### Adicionar um registro jurídico
 

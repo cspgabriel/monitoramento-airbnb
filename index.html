@@ -413,12 +413,12 @@
     </div>
   </div>
   <div class="stats-row">
-    <div class="stat-pill"><b>9</b> Normas Federais</div>
+    <div class="stat-pill"><b>10</b> Normas Federais</div>
     <div class="stat-pill"><b>8</b> Legislações Municipais</div>
     <div class="stat-pill"><b>3</b> Decisões STJ</div>
     <div class="stat-pill"><b>5</b> Artigos</div>
     <div class="stat-pill"><b id="stat-clippings">14</b> Clippings</div>
-    <div class="stat-pill"><b>113</b> Documentos no Acervo</div>
+    <div class="stat-pill"><b>129</b> Documentos no Acervo</div>
     <div class="stat-pill">Atualizado: Jun/2026</div>
   </div>
 
@@ -437,6 +437,7 @@
   <button class="tab-btn" onclick="showTab('municipal',this)">Municipal</button>
   <button class="tab-btn" onclick="showTab('stj',this)">Jurisprudência STJ</button>
   <button class="tab-btn" onclick="showTab('artigos',this)">Artigos &amp; Análises</button>
+  <button class="tab-btn" onclick="showTab('dossie',this)">📌 Dossiê ABIH-RJ</button>
   <button class="tab-btn" onclick="showTab('todos',this)">Todos os Registros</button>
   <button class="tab-btn" onclick="showTab('cronologia',this)">Cronologia</button>
   <button class="tab-btn" onclick="showTab('clippings',this)">🔴 Clippings</button>
@@ -451,12 +452,12 @@
 <section id="visao-geral" class="section active">
 
   <div class="summary-grid">
-    <div class="summary-card"><div class="num" style="color:#0066CC">9</div><div class="lbl">Normas Federais</div></div>
+    <div class="summary-card"><div class="num" style="color:#0066CC">10</div><div class="lbl">Normas Federais</div></div>
     <div class="summary-card"><div class="num" style="color:#00766C">8</div><div class="lbl">Normas Municipais</div></div>
     <div class="summary-card"><div class="num" style="color:#C62828">3</div><div class="lbl">Acórdãos STJ</div></div>
     <div class="summary-card"><div class="num" style="color:#4527A0">5</div><div class="lbl">Artigos &amp; Análises</div></div>
     <div class="summary-card"><div class="num" style="color:#E65100">8</div><div class="lbl">PLs em Tramitação</div></div>
-    <div class="summary-card"><div class="num" style="color:#37474F">113</div><div class="lbl">Documentos no Acervo</div></div>
+    <div class="summary-card"><div class="num" style="color:#37474F">129</div><div class="lbl">Documentos no Acervo</div></div>
   </div>
 
   <h2 style="margin-bottom:16px;color:#0a1f3a;font-size:1.1rem;">Destaques Recentes</h2>
@@ -584,6 +585,14 @@
           <td>2008</td>
           <td>Lei Geral do Turismo — define e classifica os meios de hospedagem turística. Trata do Cadastur.</td>
           <td>Usada pela hotelaria para argumentar que operações recorrentes/profissionalizadas são hospedagem, não locação civil.</td>
+          <td><span class="badge badge-vigente">Vigente</span></td>
+        </tr>
+        <tr onclick="openModal('lc-116-2003')">
+          <td><b>LC 116/2003</b></td>
+          <td><span class="badge badge-lc">Lei Complementar</span></td>
+          <td>2003</td>
+          <td>Lei do ISS. Subitem 9.01 da lista de serviços: hospedagem de qualquer natureza e ocupação por temporada com fornecimento de serviço.</td>
+          <td>Base jurídica para o ISS quando há fornecimento de serviço e exploração econômica equivalente à hospedagem (tese da isonomia tributária).</td>
           <td><span class="badge badge-vigente">Vigente</span></td>
         </tr>
         <tr onclick="openModal('lei-14978')">
@@ -858,6 +867,98 @@
 </section>
 
 <!-- ═══════════════════════════════════════════
+     DOSSIÊ ABIH-RJ
+═══════════════════════════════════════════ -->
+<section id="dossie" class="section">
+  <p class="section-intro"><b>Dossiê ABIH-RJ — Airbnb no Brasil: isonomia tributária, regulatória e concorrencial.</b>
+  Minuta de trabalho (03/06/2026) para memorial institucional, articulação legislativa e comunicação pública,
+  baseada em páginas oficiais da Airbnb, fontes do Governo Federal e legislação brasileira.</p>
+
+  <div class="editorial-note neutral">
+    <b>Linha institucional:</b> regular não é proibir. A ABIH-RJ não questiona a locação por temporada lícita — questiona a
+    <b>exploração econômica recorrente</b> de unidades residenciais como hospedagem de curta duração, em escala e intermediada por
+    plataforma digital, <b>sem obrigações equivalentes</b> às dos meios formais de hospedagem (tributação, transparência, segurança,
+    informação ao poder público e concorrência leal). Evita-se linguagem acusatória ("sonegação"); usa-se "lacuna de documentação
+    fiscal" e "assimetria regulatória".
+  </div>
+
+  <h3 style="font-size:1rem;font-weight:700;color:#0a1f3a;margin:6px 0 14px;">Evidências oficiais extraídas do ecossistema Airbnb</h3>
+  <div class="cards-grid">
+    <a class="card artigo" href="https://www.airbnb.com.br/help/article/3214" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block;">
+      <div class="card-top"><span class="badge badge-artigo">Evidência</span><span class="badge badge-tramitando">Lacuna fiscal</span></div>
+      <h3>Nota fiscal restrita à taxa da plataforma</h3>
+      <p>A própria Airbnb informa que emite NFS-e apenas sobre suas <b>taxas de serviço</b> e <b>não</b> sobre o valor total da acomodação — evidência de lacuna de documentação fiscal do valor total intermediado.</p>
+      <div class="card-footer"><span class="doc-link">Recibos e notas fiscais (Airbnb) ↗</span></div>
+    </a>
+    <a class="card artigo" href="https://www.airbnb.com.br/help/article/3991" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block;">
+      <div class="card-top"><span class="badge badge-artigo">Evidência</span><span class="badge badge-vigente">Capacidade técnica</span></div>
+      <h3>Coleta CPF/CNPJ e pode bloquear calendário</h3>
+      <p>A plataforma exige dados fiscais de anfitriões, coanfitriões e hóspedes e pode interromper pagamentos e bloquear calendários — demonstra capacidade técnica de compliance fiscal e compartilhamento de dados.</p>
+      <div class="card-footer"><span class="doc-link">Dados fiscais exigidos (Airbnb) ↗</span></div>
+    </a>
+    <a class="card artigo" href="https://www.airbnb.com.br/help/article/2509" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block;">
+      <div class="card-top"><span class="badge badge-artigo">Evidência</span><span class="badge badge-vigente">Viabilidade</span></div>
+      <h3>Recolhe e repassa tributos em outras jurisdições</h3>
+      <p>Onde há lei ou acordo, a Airbnb calcula, recolhe e repassa impostos locais em nome dos anfitriões. Demonstra viabilidade técnica de um modelo equivalente no Brasil (Brasil não constava no rol em 03/06/2026).</p>
+      <div class="card-footer"><span class="doc-link">Coleta e repasse de impostos (Airbnb) ↗</span></div>
+    </a>
+    <a class="card artigo" href="https://www.airbnb.com.br/help/article/3345" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block;">
+      <div class="card-top"><span class="badge badge-artigo">Evidência</span><span class="badge" style="background:#E8F5E9;color:#1B5E20">Externalidades</span></div>
+      <h3>Política contra perturbação da vizinhança</h3>
+      <p>A própria plataforma reconhece externalidades (barulho, lixo, estacionamento, vandalismo) e mantém Canal de Apoio ao Vizinho — justifica regulação urbana, condominial e deveres de informação.</p>
+      <div class="card-footer"><span class="doc-link">Política de vizinhança (Airbnb) ↗</span></div>
+    </a>
+    <a class="card artigo" href="https://www.airbnb.com.br/help/article/2909" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block;">
+      <div class="card-top"><span class="badge badge-artigo">Evidência</span><span class="badge badge-federal">Estrutura BR</span></div>
+      <h3>Estrutura de pagamentos no Brasil</h3>
+      <p><b>Airbnb Plataforma Digital Ltda.</b> figura como entidade brasileira nos Termos de Pagamentos; a plataforma cobra, processa e repassa valores — relevante para cooperação fiscal e responsabilização.</p>
+      <div class="card-footer"><span class="doc-link">Termos de Pagamentos (Airbnb) ↗</span></div>
+    </a>
+    <a class="card artigo" href="https://www.airbnb.com.br/help/article/3305" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block;">
+      <div class="card-top"><span class="badge badge-artigo">Evidência</span><span class="badge badge-municipal">Registro local</span></div>
+      <h3>Registro/licença local quando aplicável</h3>
+      <p>A Airbnb orienta anfitriões a observar leis locais e a inserir número de registro/licença quando aplicável — enfraquece a tese de incompatibilidade com exigências locais (cadastro municipal).</p>
+      <div class="card-footer"><span class="doc-link">Regulamentos de curta duração (Airbnb) ↗</span></div>
+    </a>
+  </div>
+
+  <h3 style="font-size:1rem;font-weight:700;color:#0a1f3a;margin:18px 0 12px;">Matriz probatória resumida</h3>
+  <div class="table-wrap" style="margin-bottom:28px">
+    <table>
+      <thead><tr><th>Tema</th><th>Evidência oficial</th><th>Utilidade no dossiê</th></tr></thead>
+      <tbody>
+        <tr><td><b>Operação no Brasil</b></td><td>Airbnb Plataforma Digital Ltda. nos Termos de Pagamento</td><td>Estrutura formal vinculada à operação</td></tr>
+        <tr><td><b>Fluxo financeiro</b></td><td>Termos de Pagamento: cobrança, processamento e repasse</td><td>Capacidade de controle financeiro e informacional</td></tr>
+        <tr><td><b>Nota fiscal</b></td><td>NFS-e apenas sobre a taxa de serviço, não sobre o valor total</td><td>Lacuna de documentação fiscal do valor intermediado</td></tr>
+        <tr><td><b>Dados fiscais</b></td><td>Exige CPF/CNPJ; pode bloquear calendário/pagamentos</td><td>Capacidade técnica de compliance fiscal</td></tr>
+        <tr><td><b>Recolhimento internacional</b></td><td>Recolhe/repassa tributos onde há lei/acordo</td><td>Viabilidade operacional de modelo no Brasil</td></tr>
+        <tr><td><b>Responsabilidade tributária</b></td><td>Obrigações fiscais atribuídas aos anfitriões</td><td>Pulverização de deveres; dificuldade de fiscalização</td></tr>
+        <tr><td><b>Externalidades</b></td><td>Política contra perturbação da vizinhança</td><td>Justifica regulação urbana e condominial</td></tr>
+        <tr><td><b>Reforma Tributária</b></td><td>RFB prevê regras de informação de plataformas digitais</td><td>Janela regulatória nacional em 2026</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 style="font-size:1rem;font-weight:700;color:#0a1f3a;margin:6px 0 12px;">Propostas objetivas da ABIH-RJ</h3>
+  <div class="cards-grid">
+    <div class="card federal"><h3>1 · Obrigação nacional de informação fiscal</h3><p>Plataformas informam periodicamente ao fisco: CPF/CNPJ, unidade, município/bairro, diárias, valor bruto, taxa, valor líquido, cancelamentos e indícios de profissionalização.</p></div>
+    <div class="card municipal"><h3>2 · Cadastro municipal obrigatório</h3><p>Municípios podem exigir cadastro das unidades e número obrigatório no anúncio, com bloqueio de anúncio irregular após notificação.</p></div>
+    <div class="card federal"><h3>3 · Retenção/recolhimento quando cabível</h3><p>Retenção ou recolhimento automático pela plataforma quando houver lei aplicável — modelo que a Airbnb já opera em outras jurisdições.</p></div>
+    <div class="card federal"><h3>4 · Documentar a operação total</h3><p>Solução fiscal para documentar o valor total da operação intermediada, não apenas a taxa da plataforma, preservando o sujeito passivo de cada tributo.</p></div>
+    <div class="card estadual"><h3>5 · Identificar anfitrião profissional</h3><p>Critérios objetivos: nº de unidades, reservas/diárias por ano, faturamento, uso de CNPJ, gestão por empresa, serviços acessórios e ocupação majoritária por curta duração.</p></div>
+    <div class="card municipal"><h3>6 · Dados turísticos agregados</h3><p>Compartilhamento de dados agregados para políticas de turismo, habitação, mobilidade, segurança e ordenamento urbano.</p></div>
+    <div class="card stj"><h3>7 · Proteção a vizinhança e condomínios</h3><p>Deveres mínimos de resposta a notificações de condomínios, vizinhos e autoridades, com prazo, histórico de reincidência e medidas progressivas.</p></div>
+  </div>
+
+  <div class="modal-footer" style="border-radius:12px;margin-top:8px;">
+    <a class="btn btn-primary" href="dossies/2026-06-03-dossie-abih-rj-airbnb-brasil.md" target="_blank" rel="noopener">📄 Abrir dossiê completo (Markdown)</a>
+    <a class="btn btn-secondary" href="legislacao-brasil/analises/Memorial-Hotelaria-PL-Airbnb.pdf" target="_blank" rel="noopener">📄 Memorial Hotelaria (acervo)</a>
+  </div>
+
+  <p style="font-size:.78rem;color:#888;margin-top:14px;">Fontes oficiais (acesso em 03/06/2026): páginas de ajuda da Airbnb (arts. 2588, 2908, 2909, 3214, 3991, 2509, 3345, 3290, 3305), Lei 8.245/1991, LC 116/2003, Receita Federal (Carnê-Leão e Reforma Tributária 2026) e Ministério do Turismo (FNRH). Uso institucional; não imputa sonegação sem prova fiscal individualizada.</p>
+</section>
+
+<!-- ═══════════════════════════════════════════
      TODOS OS REGISTROS
 ═══════════════════════════════════════════ -->
 <section id="todos" class="section">
@@ -883,6 +984,7 @@
         <tr data-ambito="Federal" onclick="openModal('lei-14978')"><td><span class="badge badge-federal">Federal</span></td><td><b>Lei 14.978/2024</b></td><td><span class="badge badge-lei">Lei</span></td><td>2024</td><td>Altera a Lei Geral do Turismo</td><td><span class="badge badge-vigente">Vigente</span></td></tr>
         <tr data-ambito="Federal" onclick="openModal('pl-2730-2019')"><td><span class="badge badge-federal">Federal</span></td><td><b>PL 2.730/2019</b></td><td><span class="badge badge-pl">PL</span></td><td>2019</td><td>Regulamentação de plataformas de aluguel por temporada</td><td><span class="badge badge-arquivado">Arquivado</span></td></tr>
         <tr data-ambito="Federal" onclick="openModal('plc-1809-2020')"><td><span class="badge badge-federal">Federal</span></td><td><b>PLC 1.809/2020</b></td><td><span class="badge badge-pl">PL</span></td><td>2020</td><td>Locação por temporada e hospedagem via plataformas</td><td><span class="badge badge-tramitando">Em Tramitação</span></td></tr>
+        <tr data-ambito="Federal" onclick="openModal('lc-116-2003')"><td><span class="badge badge-federal">Federal</span></td><td><b>LC 116/2003</b></td><td><span class="badge badge-lc">Lei Complementar</span></td><td>2003</td><td>Lei do ISS — subitem 9.01: hospedagem e ocupação por temporada com serviço</td><td><span class="badge badge-vigente">Vigente</span></td></tr>
         <tr data-ambito="Federal" onclick="openModal('lc-182-2021')"><td><span class="badge badge-federal">Federal</span></td><td><b>LC 182/2021</b></td><td><span class="badge badge-lc">Lei Complementar</span></td><td>2021</td><td>Marco Legal das Startups — plataformas de intermediação</td><td><span class="badge badge-vigente">Vigente</span></td></tr>
         <tr data-ambito="Federal" onclick="openModal('pl-4-2025')"><td><span class="badge badge-federal">Federal</span></td><td><b>PL nº 4/2025</b></td><td><span class="badge badge-pl">PL</span></td><td>2025</td><td>Novo Código Civil — permite proibição de Airbnb em condomínios</td><td><span class="badge badge-tramitando">Em Tramitação</span></td></tr>
         <tr data-ambito="Federal" onclick="openModal('lc-214-2025')"><td><span class="badge badge-federal">Federal</span></td><td><b>LC 214/2025</b></td><td><span class="badge badge-lc">Lei Complementar</span></td><td>2025</td><td>Reforma Tributária — equipara locação &lt;90 dias à hotelaria (IBS/CBS)</td><td><span class="badge badge-vigente">Vigente</span></td></tr>
@@ -1088,13 +1190,14 @@
      ACERVO DE DOCUMENTOS
 ═══════════════════════════════════════════ -->
 <section id="acervo" class="section">
-  <p class="section-intro">Acervo documental completo do repositório: <b>113 arquivos</b> (PDF e DOCX) entre legislação federal e municipal, decisões judiciais, projetos de lei, análises e clippings nacionais e internacionais. Clique para abrir o documento original.</p>
+  <p class="section-intro">Acervo documental completo do repositório: <b>129 arquivos</b> (PDF, DOCX, XLSX e PPTX) entre legislação federal e municipal, decisões judiciais, projetos de lei, análises, clippings nacionais e internacionais e os materiais brutos do SharePoint da ABIH-RJ. Clique para abrir o documento original.</p>
 
   <div class="filter-bar">
     <input type="text" id="search-acervo" placeholder="Buscar documento por nome, categoria ou tema…" oninput="renderAcervo(this.value)">
     <button class="pill-btn on" onclick="filterAcervoCat('',this)">Tudo</button>
     <button class="pill-btn" onclick="filterAcervoCat('Legislação',this)">Legislação</button>
     <button class="pill-btn" onclick="filterAcervoCat('Clipping',this)">Clippings</button>
+    <button class="pill-btn" onclick="filterAcervoCat('Material SharePoint',this)">SharePoint</button>
   </div>
 
   <div id="acervo-container"></div>
@@ -1115,6 +1218,8 @@
 <div class="modal-overlay" id="modal-pl-2730-2019"><div class="modal"><div class="modal-header"><div><div class="modal-tags"><span class="badge badge-pl">PL</span><span class="badge badge-federal">Federal</span><span class="badge badge-arquivado">Arquivado</span></div><h2>PL 2.730/2019 — Regulamentação de Plataformas de Aluguel por Temporada</h2></div><button class="modal-close" onclick="closeModal('modal-pl-2730-2019')">✕</button></div><div class="modal-body"><div class="modal-section"><h4>Ementa</h4><p>Proposta de regulamentação de plataformas digitais de aluguel por temporada, com cadastro nacional de anfitriões, obrigações de transparência e responsabilidade solidária por danos.</p></div><div class="modal-section"><h4>Tramitação</h4><p>Não avançou nas comissões da Câmara e foi arquivado. Serviu de base para projetos municipais posteriores (Rio de Janeiro, Florianópolis) que adotaram a ideia de cadastro obrigatório.</p></div></div><div class="modal-footer"><button class="btn btn-secondary" onclick="closeModal('modal-pl-2730-2019')">Fechar</button></div></div></div>
 
 <div class="modal-overlay" id="modal-plc-1809-2020"><div class="modal"><div class="modal-header"><div><div class="modal-tags"><span class="badge badge-pl">PL</span><span class="badge badge-federal">Federal</span><span class="badge badge-tramitando">Em Tramitação</span></div><h2>PLC 1.809/2020 — Hospedagem por plataformas digitais</h2></div><button class="modal-close" onclick="closeModal('modal-plc-1809-2020')">✕</button></div><div class="modal-body"><div class="modal-section"><h4>Conteúdo</h4><p>Projeto de lei que trata da locação por temporada e da hospedagem por meio de plataformas digitais, integrando o conjunto de tentativas legislativas federais de disciplinar a atividade.</p></div></div><div class="modal-footer"><a class="btn btn-primary" href="legislacao-brasil/federal/PLC_01809_2020.pdf" target="_blank" rel="noopener">📄 Abrir documento no acervo</a><button class="btn btn-secondary" onclick="closeModal('modal-plc-1809-2020')">Fechar</button></div></div></div>
+
+<div class="modal-overlay" id="modal-lc-116-2003"><div class="modal"><div class="modal-header"><div><div class="modal-tags"><span class="badge badge-lc">Lei Complementar</span><span class="badge badge-federal">Federal</span><span class="badge badge-vigente">Vigente</span></div><h2>LC 116/2003 — Lei do ISS (subitem 9.01)</h2></div><button class="modal-close" onclick="closeModal('modal-lc-116-2003')">✕</button></div><div class="modal-body"><div class="modal-section"><h4>Ementa</h4><p>Dispõe sobre o Imposto Sobre Serviços de Qualquer Natureza (ISS). A lista anexa, no <b>subitem 9.01</b>, inclui "hospedagem de qualquer natureza em hotéis, apart-service, flats, apart-hotéis, hotéis-residência, motéis, pensões e congêneres; ocupação por temporada com fornecimento de serviço".</p></div><div class="modal-section"><h4>Leitura institucional (Dossiê ABIH-RJ)</h4><p>Nem toda locação por temporada é automaticamente serviço sujeito a ISS. Mas, quando há <b>fornecimento de serviço</b> e exploração econômica equivalente à hospedagem, existe base jurídica para fiscalização municipal e tributação — fundamento das leis de Petrópolis, Salvador e Fortaleza e da tese de isonomia tributária.</p></div></div><div class="modal-footer"><a class="btn btn-primary" href="https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp116.htm" target="_blank" rel="noopener">Planalto ↗</a><a class="btn btn-secondary" href="https://sped.rfb.gov.br/item/show/1601" target="_blank" rel="noopener">Lista de serviços (RFB) ↗</a></div></div></div>
 
 <div class="modal-overlay" id="modal-lc-182-2021"><div class="modal"><div class="modal-header"><div><div class="modal-tags"><span class="badge badge-lc">Lei Complementar</span><span class="badge badge-federal">Federal</span><span class="badge badge-vigente">Vigente</span></div><h2>LC 182/2021 — Marco Legal das Startups</h2></div><button class="modal-close" onclick="closeModal('modal-lc-182-2021')">✕</button></div><div class="modal-body"><div class="modal-section"><h4>Ementa</h4><p>Institui o Marco Legal das Startups e do Empreendedorismo Inovador. Reconhece e regula empresas de tecnologia, inclusive plataformas de intermediação digital.</p></div><div class="modal-section"><h4>Impacto</h4><p>Reforça o argumento de que plataformas como Airbnb são intermediadoras — não prestadoras diretas de hospedagem — sustentando a distinção entre o contrato de locação e a prestação de serviço tecnológico.</p></div></div><div class="modal-footer"><a class="btn btn-primary" href="https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp182.htm" target="_blank" rel="noopener">Planalto ↗</a><button class="btn btn-secondary" onclick="closeModal('modal-lc-182-2021')">Fechar</button></div></div></div>
 
@@ -1270,7 +1375,23 @@ const ACERVO=[
 {"t": "Itália prepara projeto para restringir serviços como Airbnb - Viagem e Turismo - Ansa.it", "cat": "Clipping", "sub": "regulacao-por-pais / Italia", "ext": "PDF", "url": "clippings/regulacao-por-pais/Italia/It%C3%A1lia%20prepara%20projeto%20para%20restringir%20servi%C3%A7os%20como%20Airbnb%20-%20Viagem%20e%20Turismo%20-%20Ansa.it.pdf", "ano": ""},
 {"t": "Justiça derruba norma que proibia casas para Airbnb em Florença - Viagem e Turismo - Ansa.it", "cat": "Clipping", "sub": "regulacao-por-pais / Italia", "ext": "PDF", "url": "clippings/regulacao-por-pais/Italia/Justi%C3%A7a%20derruba%20norma%20que%20proibia%20casas%20para%20Airbnb%20em%20Floren%C3%A7a%20-%20Viagem%20e%20Turismo%20-%20Ansa.it.pdf", "ano": ""},
 {"t": "MP de Milão apreende R$ 4 bilhões do Airbnb por fraude fiscal Empresas Época NEGÓCIOS", "cat": "Clipping", "sub": "regulacao-por-pais / Italia", "ext": "PDF", "url": "clippings/regulacao-por-pais/Italia/MP%20de%20Mil%C3%A3o%20apreende%20R%24%204%20bilh%C3%B5es%20do%20Airbnb%20por%20fraude%20fiscal%20_%20Empresas%20_%20%C3%89poca%20NEG%C3%93CIOS.pdf", "ano": ""},
-{"t": "Massive change to Airbnb rules likely be agreed next ..", "cat": "Clipping", "sub": "regulacao-por-pais / Reino-Unido", "ext": "PDF", "url": "clippings/regulacao-por-pais/Reino-Unido/Massive%20change%20to%20Airbnb%20rules%20likely%20be%20agreed%20next%20.._.pdf", "ano": ""}
+{"t": "Massive change to Airbnb rules likely be agreed next ..", "cat": "Clipping", "sub": "regulacao-por-pais / Reino-Unido", "ext": "PDF", "url": "clippings/regulacao-por-pais/Reino-Unido/Massive%20change%20to%20Airbnb%20rules%20likely%20be%20agreed%20next%20.._.pdf", "ano": ""},
+{"t": "A ameaça da Airbnb aos aluguéis convencionais", "cat": "Material SharePoint", "sub": "materiais-brutos-sharepoint", "ext": "PDF", "url": "arquivos%20ChatGPT/materiais-brutos-sharepoint/A%20amea%C3%A7a%20da%20Airbnb%20aos%20alugu%C3%A9is%20convencionais.pdf", "ano": ""},
+{"t": "AIRBNB - ABIH - Reunião 25.03.2025", "cat": "Material SharePoint", "sub": "materiais-brutos-sharepoint", "ext": "DOCX", "url": "arquivos%20ChatGPT/materiais-brutos-sharepoint/AIRBNB%20-%20ABIH%20-%20Reuni%C3%A3o%2025.03.2025.docx", "ano": "2025"},
+{"t": "Airbnb-Tax-Guide-2021-Brazil-PORTUGUESE-Final", "cat": "Material SharePoint", "sub": "materiais-brutos-sharepoint", "ext": "PDF", "url": "arquivos%20ChatGPT/materiais-brutos-sharepoint/Airbnb-Tax-Guide-2021-Brazil-PORTUGUESE-Final.pdf", "ano": "2021"},
+{"t": "Airbnb", "cat": "Material SharePoint", "sub": "materiais-brutos-sharepoint", "ext": "XLSX", "url": "arquivos%20ChatGPT/materiais-brutos-sharepoint/Airbnb.xlsx", "ano": ""},
+{"t": "Apresentação1", "cat": "Material SharePoint", "sub": "materiais-brutos-sharepoint", "ext": "PPTX", "url": "arquivos%20ChatGPT/materiais-brutos-sharepoint/Apresenta%C3%A7%C3%A3o1.pptx", "ano": ""},
+{"t": "Barcelona proíbe airbnb e impacta mercado imobiliário", "cat": "Material SharePoint", "sub": "materiais-brutos-sharepoint", "ext": "PDF", "url": "arquivos%20ChatGPT/materiais-brutos-sharepoint/Barcelona%20pro%C3%ADbe%20airbnb%20e%20impacta%20mercado%20imobili%C3%A1rio.pdf", "ano": ""},
+{"t": "CLIPPINGS AIRBNB2020", "cat": "Material SharePoint", "sub": "materiais-brutos-sharepoint", "ext": "DOCX", "url": "arquivos%20ChatGPT/materiais-brutos-sharepoint/CLIPPINGS%20AIRBNB2020.docx", "ano": "2020"},
+{"t": "COMPILADO AIRBNB", "cat": "Material SharePoint", "sub": "materiais-brutos-sharepoint", "ext": "PDF", "url": "arquivos%20ChatGPT/materiais-brutos-sharepoint/COMPILADO%20AIRBNB.pdf", "ano": ""},
+{"t": "Lei-Complementar-099-2017", "cat": "Material SharePoint", "sub": "materiais-brutos-sharepoint", "ext": "PDF", "url": "arquivos%20ChatGPT/materiais-brutos-sharepoint/Lei-Complementar-099-2017.pdf", "ano": "2017"},
+{"t": "Lei-ordinaria-4140-2019-Ubatuba-SP", "cat": "Material SharePoint", "sub": "materiais-brutos-sharepoint", "ext": "PDF", "url": "arquivos%20ChatGPT/materiais-brutos-sharepoint/Lei-ordinaria-4140-2019-Ubatuba-SP.pdf", "ano": "2019"},
+{"t": "MEMORIAL FINAL", "cat": "Material SharePoint", "sub": "materiais-brutos-sharepoint", "ext": "DOCX", "url": "arquivos%20ChatGPT/materiais-brutos-sharepoint/MEMORIAL%20FINAL.docx", "ano": ""},
+{"t": "Ocorrências Airbnb 24", "cat": "Material SharePoint", "sub": "materiais-brutos-sharepoint", "ext": "PDF", "url": "arquivos%20ChatGPT/materiais-brutos-sharepoint/Ocorr%C3%AAncias%20Airbnb%2024.pdf", "ano": ""},
+{"t": "Sugestões Substitutivo AIRBNB v2 (3) - final", "cat": "Material SharePoint", "sub": "materiais-brutos-sharepoint", "ext": "DOCX", "url": "arquivos%20ChatGPT/materiais-brutos-sharepoint/Sugest%C3%B5es%20Substitutivo%20AIRBNB%20v2%20%283%29%20-%20final.docx", "ano": ""},
+{"t": "airbnb - ph - resumo. artigo", "cat": "Material SharePoint", "sub": "materiais-brutos-sharepoint", "ext": "DOCX", "url": "arquivos%20ChatGPT/materiais-brutos-sharepoint/airbnb%20-%20ph%20-%20resumo.%20artigo.docx", "ano": ""},
+{"t": "clipping - airbnb patrocina carnaval 2026", "cat": "Material SharePoint", "sub": "materiais-brutos-sharepoint", "ext": "DOCX", "url": "arquivos%20ChatGPT/materiais-brutos-sharepoint/clipping%20-%20airbnb%20patrocina%20carnaval%202026.docx", "ano": "2026"},
+{"t": "estratégia Airbnb", "cat": "Material SharePoint", "sub": "materiais-brutos-sharepoint", "ext": "DOCX", "url": "arquivos%20ChatGPT/materiais-brutos-sharepoint/estrat%C3%A9gia%20Airbnb.docx", "ano": ""}
 ];
 
 /* ─── TABS ─── */
@@ -1362,7 +1483,8 @@ let acervoCat = '';
 const SUB_LABELS = {
   'federal':'Federal','municipios':'Municípios','decisoes-judiciais':'Decisões Judiciais',
   'projetos-de-lei':'Projetos de Lei','analises':'Análises','geral-2024':'Geral 2024',
-  'geral-2025':'Geral 2025','problemas-recentes':'Problemas Recentes','regulacao-por-pais':'Regulação por País'
+  'geral-2025':'Geral 2025','problemas-recentes':'Problemas Recentes','regulacao-por-pais':'Regulação por País',
+  'materiais-brutos-sharepoint':'Materiais Brutos (SharePoint ABIH-RJ)'
 };
 function subLabel(sub) {
   if (!sub) return 'Outros';

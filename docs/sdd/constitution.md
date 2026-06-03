@@ -50,7 +50,7 @@ duplicado sempre que reduzirem o custo de manutenção.
 |---|---------|---------------|
 | A1 | Single-file `index.html` na raiz | Página inicial do repo; deploy trivial no Pages; portátil. |
 | A2 | CSS e JS embutidos, *vanilla* | Cumpre P1; sem etapa de build. |
-| A3 | Acervo via manifesto JS embutido (`const ACERVO`) | Lista os 113 arquivos sem `fetch` (funciona em `file://`). |
+| A3 | Acervo via manifesto JS embutido (`const ACERVO`) | Lista os 129 arquivos sem `fetch` (funciona em `file://`). |
 | A4 | Registros jurídicos em HTML estático + modais | Conteúdo curado, rico e estável; baixo volume. |
 | A5 | Links de documento por caminho relativo URL-encoded | Servível tanto local quanto no Pages. |
 | A6 | Deploy via GitHub Actions (`pages.yml`) | Publicação automática a cada push em `main`. |

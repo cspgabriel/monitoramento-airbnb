@@ -15,7 +15,7 @@
 
 ## Portão 3 — Integridade de dados
 - [x] 9/9 links de documento das modais existem no repositório.
-- [x] 113/113 URLs do manifesto do acervo existem no repositório.
+- [x] 129/129 URLs do manifesto do acervo existem no repositório.
 - [x] Contador de clippings do cabeçalho = nº de `.clip-card` renderizados.
 
 ## Portão 4 — Robustez técnica

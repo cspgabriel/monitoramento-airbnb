@@ -36,8 +36,9 @@ O site já está pronto para publicação. Para ligar:
 | **Artigos & Análises** | Análises regulatórias e posicionamentos com links às fontes. |
 | **Todos os Registros** | Tabela unificada e filtrável de tudo. |
 | **Cronologia** | Linha do tempo de 1991 a 2026. |
+| **📌 Dossiê ABIH-RJ** | Tese institucional de isonomia tributária/regulatória: evidências oficiais da Airbnb, matriz probatória e propostas. |
 | **🔴 Clippings** | Notícias/estudos negativos (fraude, segurança, lavagem, habitação, impacto social). |
-| **📁 Acervo** | Navegador dos **113 documentos** (PDF/DOCX) do repositório, com link direto. |
+| **📁 Acervo** | Navegador dos **129 documentos** (PDF/DOCX/XLSX/PPTX) do repositório, com link direto. |
 
 Recursos: **busca global** no topo (varre todas as abas e o acervo), filtros por
 âmbito/status/categoria, fichas detalhadas (modais) com link para o documento original e
@@ -54,18 +55,21 @@ para a fonte oficial, layout responsivo e modo impressão.
 │   ├── constitution.md
 │   └── features/001-painel-monitoramento/
 │       ├── specify.md · plan.md · tasks.md · checklist.md
+├── dossies/                           # Dossiê institucional ABIH-RJ (Markdown)
 ├── legislacao-brasil/                 # Legislação, decisões, PLs e análises
 │   ├── federal/  municipios/  decisoes-judiciais/  projetos-de-lei/  analises/
 ├── clippings/                         # Clippings de imprensa
 │   ├── geral-2024/  geral-2025/  problemas-recentes/  regulacao-por-pais/
+├── arquivos ChatGPT/                  # Materiais ChatGPT + materiais-brutos-sharepoint/
 └── material-complementar-criado-pelo-chatgpt/   # Material editorial de apoio
 ```
 
 ## 🛠️ Manutenção
 
-- **Acervo:** os 113 itens da aba 📁 Acervo são listados a partir de um manifesto embutido no
-  `index.html` (constante `ACERVO`). Ao adicionar/remover arquivos em `legislacao-brasil/` ou
-  `clippings/`, regenere o manifesto (ver [`docs/sdd/.../tasks.md`](docs/sdd/features/001-painel-monitoramento/tasks.md)).
+- **Acervo:** os 129 itens da aba 📁 Acervo são listados a partir de um manifesto embutido no
+  `index.html` (constante `ACERVO`). Ao adicionar/remover arquivos em `legislacao-brasil/`,
+  `clippings/` ou `arquivos ChatGPT/materiais-brutos-sharepoint/`, regenere o manifesto
+  (ver [`docs/sdd/.../tasks.md`](docs/sdd/features/001-painel-monitoramento/tasks.md)).
 - **Registros jurídicos:** edite as tabelas/cards e as modais correspondentes no `index.html`.
 
 ## ⚠️ Aviso

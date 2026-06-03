@@ -15,7 +15,7 @@ index.html
 │   ├── modals    20 fichas detalhadas (.modal-overlay)
 │   └── footer
 └── <script>     JS vanilla
-    ├── const ACERVO = [...113 itens...]   (manifesto embutido — decisão A3)
+    ├── const ACERVO = [...129 itens...]   (manifesto embutido — decisão A3)
     ├── navegação de abas e modais
     ├── filtros (tabela/cards/clippings/município/âmbito)
     ├── renderAcervo()    agrupa o ACERVO por subpasta e injeta HTML
