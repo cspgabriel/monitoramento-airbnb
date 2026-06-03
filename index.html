@@ -416,7 +416,7 @@
     <div class="stat-pill"><b>13</b> Normas Federais</div>
     <div class="stat-pill"><b>8</b> Legislações Municipais</div>
     <div class="stat-pill"><b>3</b> Decisões STJ</div>
-    <div class="stat-pill"><b>7</b> Artigos</div>
+    <div class="stat-pill"><b>13</b> Artigos</div>
     <div class="stat-pill"><b id="stat-clippings">14</b> Clippings</div>
     <div class="stat-pill"><b>129</b> Documentos no Acervo</div>
     <div class="stat-pill">Atualizado: Jun/2026</div>
@@ -439,8 +439,8 @@
   <button class="tab-btn" onclick="showTab('artigos',this)">Artigos &amp; Análises</button>
   <button class="tab-btn" onclick="showTab('dossie',this)">📌 Dossiê ABIH-RJ</button>
   <button class="tab-btn" onclick="showTab('todos',this)">Todos os Registros</button>
-  <button class="tab-btn" onclick="showTab('cronologia',this)">Cronologia</button>
   <button class="tab-btn" onclick="showTab('clippings',this)">🔴 Clippings</button>
+  <button class="tab-btn" onclick="showTab('mundo',this)">🌍 Mundo</button>
   <button class="tab-btn" onclick="showTab('acervo',this)">📁 Acervo</button>
 </div>
 
@@ -455,7 +455,7 @@
     <div class="summary-card"><div class="num" style="color:#0066CC">13</div><div class="lbl">Normas Federais</div></div>
     <div class="summary-card"><div class="num" style="color:#00766C">8</div><div class="lbl">Normas Municipais</div></div>
     <div class="summary-card"><div class="num" style="color:#C62828">3</div><div class="lbl">Acórdãos STJ</div></div>
-    <div class="summary-card"><div class="num" style="color:#4527A0">7</div><div class="lbl">Artigos &amp; Benchmarks</div></div>
+    <div class="summary-card"><div class="num" style="color:#4527A0">13</div><div class="lbl">Artigos &amp; Benchmarks</div></div>
     <div class="summary-card"><div class="num" style="color:#E65100">8</div><div class="lbl">PLs em Tramitação</div></div>
     <div class="summary-card"><div class="num" style="color:#37474F">129</div><div class="lbl">Documentos no Acervo</div></div>
   </div>
@@ -710,20 +710,44 @@
           <td>Proíbe uso de HIS e HMP para hospedagem de curtíssima duração via plataformas digitais.</td>
           <td><span class="badge badge-vigente">Vigente</span></td>
         </tr>
-        <tr data-municipio="São Paulo" onclick="openModal('sp-diego-pl')">
-          <td><span class="badge badge-municipal">São Paulo</span></td>
-          <td><b>PL Diego — Hospedagem e Plataformas</b></td>
+        <tr data-municipio="São Roque" onclick="openModal('sp-diego-pl')">
+          <td><span class="badge badge-municipal">São Roque/SP</span></td>
+          <td><b>PL 2/2025-L — Vereador Diego Gouveia</b></td>
           <td><span class="badge badge-pl">PL</span></td>
-          <td>2024–2025</td>
-          <td>Projeto de lei municipal sobre hospedagem e plataformas digitais de aluguel por temporada em São Paulo.</td>
+          <td>2025</td>
+          <td>Estância Turística de São Roque: proteção do consumidor nos serviços de hospedagem e locação por temporada via plataformas digitais.</td>
           <td><span class="badge badge-tramitando">Em Tramitação</span></td>
         </tr>
-        <tr data-municipio="Rio de Janeiro" onclick="openModal('rj-pl-2024')">
+        <tr data-municipio="Rio de Janeiro" onclick="openModal('rj-pl-372')">
           <td><span class="badge badge-municipal">Rio de Janeiro</span></td>
-          <td><b>PL — Câmara Municipal (em votação)</b></td>
+          <td><b>PL 372/2025 (subst. PL 107/25) — Salvino Oliveira</b></td>
           <td><span class="badge badge-pl">PL</span></td>
-          <td>2024–2025</td>
-          <td>Institui cadastro municipal obrigatório de anfitriões e hóspedes para aluguel de curta temporada. Proibição na orla foi retirada do texto.</td>
+          <td>2025</td>
+          <td>Substitutivo que regulamenta a curta temporada no Rio (cadastro, ISS, regras). Texto novo após arquivamento da 1ª versão.</td>
+          <td><span class="badge badge-tramitando">Em Tramitação</span></td>
+        </tr>
+        <tr data-municipio="Rio de Janeiro" onclick="openModal('rj-pl-107')">
+          <td><span class="badge badge-municipal">Rio de Janeiro</span></td>
+          <td><b>PL 107/2025 — Salvino Oliveira (1ª versão)</b></td>
+          <td><span class="badge badge-pl">PL</span></td>
+          <td>2025</td>
+          <td>Primeira versão sobre intermediação e hospedagem de curta temporada no Rio. Arquivado e substituído pelo PL 372/2025.</td>
+          <td><span class="badge badge-arquivado">Arquivado</span></td>
+        </tr>
+        <tr data-municipio="Rio de Janeiro" onclick="openModal('rj-pl-cesarmaia')">
+          <td><span class="badge badge-municipal">Rio de Janeiro</span></td>
+          <td><b>Minuta — Vereador Cesar Maia</b></td>
+          <td><span class="badge badge-pl">PL</span></td>
+          <td>2025</td>
+          <td>Anteprojeto que define como empresarial a hospedagem em imóvel residencial por até 90 dias via plataformas, no Município do Rio.</td>
+          <td><span class="badge badge-tramitando">Minuta</span></td>
+        </tr>
+        <tr data-municipio="Rio de Janeiro" onclick="openModal('rj-pl-flaviovalle')">
+          <td><span class="badge badge-municipal">Rio de Janeiro</span></td>
+          <td><b>PL — Vereador Flávio Valle</b></td>
+          <td><span class="badge badge-pl">PL</span></td>
+          <td>2025</td>
+          <td>Regulamenta a intermediação de hospedagem/locação por temporada até 90 dias via plataforma digital (base na LC 116/2003) no Rio.</td>
           <td><span class="badge badge-tramitando">Em Tramitação</span></td>
         </tr>
         <tr data-municipio="Florianópolis" onclick="openModal('floripa-pl-2025')">
@@ -901,6 +925,48 @@
       <div class="card-footer"><span class="doc-link">NYC OSE ↗</span><span class="card-year">2023–2024</span></div>
     </a>
 
+    <a class="card artigo" href="https://www.migalhas.com.br/autor/ricardo-almeida" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block;">
+      <div class="card-top"><span class="badge badge-artigo">Doutrina</span><span class="badge" style="background:#E3F0FF;color:#0066CC">Ricardo Almeida</span></div>
+      <h3>Ricardo Almeida (Migalhas) — tributação e concorrência na hospedagem</h3>
+      <p>Colunas de Ricardo Almeida Ribeiro da Silva (Procurador do Município do RJ, professor de Direito Tributário/UERJ) sobre medidas fiscais e extrafiscais para evitar concorrência desleal no segmento de acomodações.</p>
+      <div class="card-footer"><span class="doc-link">Migalhas — autor ↗</span><span class="card-year">Migalhas</span></div>
+    </a>
+
+    <a class="card artigo" href="https://www.migalhas.com.br/coluna/migalhas-edilicias/345387/o-airbnb-e-a-vida-condominial-notas-da-decisao-do-stj" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block;">
+      <div class="card-top"><span class="badge badge-artigo">Doutrina</span><span class="badge" style="background:#E8F5E9;color:#1B5E20">Condomínio</span></div>
+      <h3>O Airbnb e a vida condominial: notas da decisão do STJ</h3>
+      <p>Análise jurídica, na coluna Migalhas Edilícias, sobre os reflexos da decisão do STJ para a vida condominial e a locação por curta temporada via plataformas.</p>
+      <div class="card-footer"><span class="doc-link">Migalhas Edilícias ↗</span></div>
+    </a>
+
+    <a class="card artigo" href="https://www.migalhas.com.br/coluna/reforma-do-codigo-civil/415384/a-locacao-de-curta-temporada-por-aplicativo-nos-condominios-edilicios" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block;">
+      <div class="card-top"><span class="badge badge-artigo">Doutrina</span><span class="badge" style="background:#E8F5E9;color:#1B5E20">Condomínio</span></div>
+      <h3>A locação de curta temporada por aplicativo nos condomínios edilícios</h3>
+      <p>Coluna sobre a Reforma do Código Civil discutindo o tratamento da locação de curta temporada por aplicativo nos condomínios edilícios.</p>
+      <div class="card-footer"><span class="doc-link">Migalhas ↗</span></div>
+    </a>
+
+    <a class="card artigo" href="https://www.migalhas.com.br/quentes/455451/aluguel-de-airbnb-em-condominios-depende-de-aprovacao-em-assembleia" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block;">
+      <div class="card-top"><span class="badge badge-artigo">Notícia</span><span class="badge badge-stj">STJ</span></div>
+      <h3>Aluguel de Airbnb em condomínios depende de aprovação em assembleia</h3>
+      <p>Cobertura da decisão do STJ que condiciona a curta temporada em condomínios à aprovação de 2/3 dos condôminos (não descaracterizar a destinação residencial).</p>
+      <div class="card-footer"><span class="doc-link">Migalhas ↗</span><span class="card-year">2026</span></div>
+    </a>
+
+    <a class="card artigo" href="https://hoteliernews.com.br/airbnb-canal-ou-rival-por-alfredo-lopes/" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block;">
+      <div class="card-top"><span class="badge badge-artigo">Opinião</span><span class="badge" style="background:#FFF3E0;color:#E65100">Alfredo Lopes</span></div>
+      <h3>Airbnb: canal ou rival? — por Alfredo Lopes</h3>
+      <p>Artigo de Alfredo Lopes (presidente do HotéisRIO/ABIH-RJ) sobre o papel das plataformas frente à hotelaria formal e a necessidade de obrigações equivalentes.</p>
+      <div class="card-footer"><span class="doc-link">Hotelier News ↗</span></div>
+    </a>
+
+    <a class="card artigo" href="https://www.hoteliernews.com.br/tres-perguntas-para-alfredo-lopes/" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block;">
+      <div class="card-top"><span class="badge badge-artigo">Entrevista</span><span class="badge" style="background:#FFF3E0;color:#E65100">Alfredo Lopes</span></div>
+      <h3>Três perguntas para: Alfredo Lopes (HotéisRIO)</h3>
+      <p>Entrevista com o presidente do HotéisRIO/ABIH-RJ sobre o posicionamento do setor hoteleiro diante do Airbnb e da regulação no Rio de Janeiro.</p>
+      <div class="card-footer"><span class="doc-link">Hotelier News ↗</span></div>
+    </a>
+
   </div>
 </section>
 
@@ -1031,7 +1097,10 @@
         <tr data-ambito="Federal" onclick="openModal('lc-214-2025')"><td><span class="badge badge-federal">Federal</span></td><td><b>LC 214/2025</b></td><td><span class="badge badge-lc">Lei Complementar</span></td><td>2025</td><td>Reforma Tributária — equipara locação &lt;90 dias à hotelaria (IBS/CBS)</td><td><span class="badge badge-vigente">Vigente</span></td></tr>
         <tr data-ambito="Federal" onclick="openModal('decreto-12955')"><td><span class="badge badge-federal">Federal</span></td><td><b>Decreto 12.955/2026</b></td><td><span class="badge badge-decreto">Decreto</span></td><td>2026</td><td>Regulamenta LC 214/2025 — tributação de anfitriões digitais</td><td><span class="badge badge-vigente">Vigente</span></td></tr>
         <tr data-ambito="Municipal" onclick="openModal('sp-decreto-2025')"><td><span class="badge badge-municipal">SP</span></td><td><b>Decreto 64.244/2025</b></td><td><span class="badge badge-decreto">Decreto</span></td><td>2025</td><td>São Paulo — proíbe Airbnb em HIS e HMP</td><td><span class="badge badge-vigente">Vigente</span></td></tr>
-        <tr data-ambito="Municipal" onclick="openModal('rj-pl-2024')"><td><span class="badge badge-municipal">RJ</span></td><td><b>PL — Câmara Rio</b></td><td><span class="badge badge-pl">PL</span></td><td>2024</td><td>Rio de Janeiro — cadastro municipal de anfitriões</td><td><span class="badge badge-tramitando">Em Tramitação</span></td></tr>
+        <tr data-ambito="Municipal" onclick="openModal('rj-pl-372')"><td><span class="badge badge-municipal">RJ</span></td><td><b>PL 372/2025 (Salvino)</b></td><td><span class="badge badge-pl">PL</span></td><td>2025</td><td>Rio — substitutivo do PL 107/25 (curta temporada)</td><td><span class="badge badge-tramitando">Em Tramitação</span></td></tr>
+        <tr data-ambito="Municipal" onclick="openModal('rj-pl-107')"><td><span class="badge badge-municipal">RJ</span></td><td><b>PL 107/2025 (Salvino)</b></td><td><span class="badge badge-pl">PL</span></td><td>2025</td><td>Rio — 1ª versão, arquivada</td><td><span class="badge badge-arquivado">Arquivado</span></td></tr>
+        <tr data-ambito="Municipal" onclick="openModal('rj-pl-cesarmaia')"><td><span class="badge badge-municipal">RJ</span></td><td><b>Minuta Cesar Maia</b></td><td><span class="badge badge-pl">PL</span></td><td>2025</td><td>Rio — hospedagem empresarial até 90 dias</td><td><span class="badge badge-tramitando">Minuta</span></td></tr>
+        <tr data-ambito="Municipal" onclick="openModal('rj-pl-flaviovalle')"><td><span class="badge badge-municipal">RJ</span></td><td><b>PL Flávio Valle</b></td><td><span class="badge badge-pl">PL</span></td><td>2025</td><td>Rio — intermediação via plataforma (LC 116/2003)</td><td><span class="badge badge-tramitando">Em Tramitação</span></td></tr>
         <tr data-ambito="Municipal" onclick="openModal('floripa-pl-2025')"><td><span class="badge badge-municipal">Floripa</span></td><td><b>PL 04/2025</b></td><td><span class="badge badge-pl">PL</span></td><td>2025</td><td>Florianópolis — cadastro municipal + Cadastur obrigatório</td><td><span class="badge badge-tramitando">Em Tramitação</span></td></tr>
         <tr data-ambito="Municipal" onclick="openModal('petropolis-lei')"><td><span class="badge badge-municipal">Petrópolis</span></td><td><b>Lei 8.299/2022</b></td><td><span class="badge badge-lei">Lei</span></td><td>2022</td><td>Petrópolis — ISS / substituição tributária de plataformas</td><td><span class="badge badge-vigente">Vigente</span></td></tr>
         <tr data-ambito="Municipal" onclick="openModal('ubatuba-lei')"><td><span class="badge badge-municipal">Ubatuba</span></td><td><b>Lei 4.140/2019</b></td><td><span class="badge badge-lei">Lei</span></td><td>2019</td><td>Ubatuba — locação por temporada / hospedagem</td><td><span class="badge badge-vigente">Vigente</span></td></tr>
@@ -1041,29 +1110,6 @@
         <tr data-ambito="STJ" onclick="openModal('stj-2026')"><td><span class="badge badge-stj">STJ</span></td><td><b>EREsp — 2ª Seção</b></td><td><span class="badge badge-acordao">Acórdão</span></td><td>2026</td><td>2ª Seção — Airbnb exige aprovação de 2/3 dos condôminos</td><td><span class="badge badge-paradigma">Paradigma 2026</span></td></tr>
       </tbody>
     </table>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════
-     CRONOLOGIA
-═══════════════════════════════════════════ -->
-<section id="cronologia" class="section">
-  <div class="timeline">
-    <div class="tl-item" onclick="openModal('lei-8245')"><div class="tl-dot federal"></div><div class="tl-date">1991 · Federal</div><h4>Lei 8.245/1991 — Lei do Inquilinato</h4><p>Estabelece a locação por temporada (até 90 dias) como modalidade legalmente prevista, base legal que sustenta a operação do Airbnb no Brasil até hoje.</p></div>
-    <div class="tl-item" onclick="openModal('lei-11771')"><div class="tl-dot federal"></div><div class="tl-date">2008 · Federal</div><h4>Lei 11.771/2008 — Lei Geral do Turismo</h4><p>Define os meios de hospedagem turística e cria tensão jurídica com as plataformas digitais, usada pelo setor hoteleiro para questionar a legalidade do Airbnb.</p></div>
-    <div class="tl-item" onclick="openModal('ubatuba-lei')"><div class="tl-dot municipal"></div><div class="tl-date">2019 · Ubatuba</div><h4>Lei 4.140/2019 — Ubatuba</h4><p>Município turístico do litoral norte paulista disciplina aspectos da locação por temporada, antecipando o movimento municipal de regulação.</p></div>
-    <div class="tl-item" onclick="openModal('pl-2730-2019')"><div class="tl-dot federal"></div><div class="tl-date">2019 · Federal</div><h4>PL 2.730/2019 — Primeira tentativa de regulamentação federal</h4><p>Proposta de regulamentação de plataformas de aluguel por temporada com cadastro nacional. Arquivado sem aprovação.</p></div>
-    <div class="tl-item" onclick="openModal('stj-2021')"><div class="tl-dot stj"></div><div class="tl-date">Abril · 2021 · STJ</div><h4>REsp 1.819.075 — 4ª Turma: condomínios podem proibir</h4><p>Marco jurisprudencial: condomínios residenciais podem, mediante convenção condominial, proibir o uso de unidades para aluguel por temporada via Airbnb.</p></div>
-    <div class="tl-item" onclick="openModal('lc-182-2021')"><div class="tl-dot federal"></div><div class="tl-date">2021 · Federal</div><h4>LC 182/2021 — Marco Legal das Startups</h4><p>Reconhece a natureza de intermediação tecnológica das plataformas como Airbnb, contribuindo para distingui-las de empresas de hospedagem.</p></div>
-    <div class="tl-item" onclick="openModal('petropolis-lei')"><div class="tl-dot municipal"></div><div class="tl-date">2022 · Petrópolis</div><h4>Lei 8.299/2022 — Petrópolis: substituição tributária</h4><p>Precedente municipal de responsabilização das plataformas pelo recolhimento de ISS sobre hospedagem de curta temporada.</p></div>
-    <div class="tl-item" onclick="openModal('lei-14978')"><div class="tl-dot federal"></div><div class="tl-date">2024 · Federal</div><h4>Lei 14.978/2024 — Atualiza a Lei Geral do Turismo</h4><p>Reforma o marco do turismo, atualizando regras sobre prestadores de serviços turísticos e meios de hospedagem em meio ao debate sobre plataformas.</p></div>
-    <div class="tl-item" onclick="openModal('stj-2025')"><div class="tl-dot stj"></div><div class="tl-date">2025 · STJ</div><h4>2ª e 3ª Turmas — Nuances sobre plataformas digitais</h4><p>Decisões introduzem nuances: a mera locação via plataforma digital não viola automaticamente regras condominiais — é preciso cláusula proibitiva expressa.</p></div>
-    <div class="tl-item" onclick="openModal('lc-214-2025')"><div class="tl-dot federal"></div><div class="tl-date">2025 · Federal</div><h4>LC 214/2025 — Reforma Tributária equipara locação &lt;90 dias à hotelaria</h4><p>Anfitriões que locam imóveis por menos de 90 dias passam a ser tributados como hotelaria para fins de IBS e CBS, com redução na alíquota base.</p></div>
-    <div class="tl-item" onclick="openModal('sp-decreto-2025')"><div class="tl-dot municipal"></div><div class="tl-date">2025 · São Paulo</div><h4>Decreto 64.244/2025 — SP proíbe Airbnb em habitação popular</h4><p>Primeira grande restrição municipal: imóveis de HIS e HMP ficam proibidos de serem anunciados em plataformas digitais de hospedagem.</p></div>
-    <div class="tl-item" onclick="openModal('floripa-memo-2025')"><div class="tl-dot municipal"></div><div class="tl-date">Agosto · 2025 · Florianópolis</div><h4>Memorando Prefeitura de Florianópolis × Airbnb</h4><p>Acordo cooperativo para regularização e compartilhamento de dados. Modelo que pode servir de referência para outras cidades.</p></div>
-    <div class="tl-item" onclick="openModal('pl-4-2025')"><div class="tl-dot federal"></div><div class="tl-date">2025 · Federal</div><h4>PL nº 4/2025 — Novo Código Civil: proibição via convenção</h4><p>Em tramitação no Congresso, o novo Código Civil prevê expressamente que a convenção condominial ou assembleia podem proibir o aluguel por temporada em plataformas digitais.</p></div>
-    <div class="tl-item" onclick="openModal('decreto-12955')"><div class="tl-dot federal"></div><div class="tl-date">2026 · Federal</div><h4>Decreto 12.955/2026 — Regulamenta tributação de anfitriões</h4><p>Define alíquotas e procedimentos operacionais para a tributação de anfitriões de plataformas digitais, implementando a LC 214/2025.</p></div>
-    <div class="tl-item" onclick="openModal('stj-2026')"><div class="tl-dot stj"></div><div class="tl-date">Maio · 2026 · STJ — 2ª Seção</div><h4>EREsp — Paradigma 2026: exige aprovação de 2/3 dos condôminos</h4><p>Decisão mais recente e de maior impacto: a 2ª Seção exige aprovação de ao menos 2/3 dos condôminos em assembleia para uso de unidades em plataformas como o Airbnb.</p></div>
   </div>
 </section>
 
@@ -1228,6 +1274,79 @@
 </section>
 
 <!-- ═══════════════════════════════════════════
+     MUNDO — O QUE O MUNDO FAZ SOBRE O AIRBNB
+═══════════════════════════════════════════ -->
+<section id="mundo" class="section">
+  <p class="section-intro"><b>O que o mundo está fazendo sobre o Airbnb.</b> Panorama da regulação do aluguel de curta
+  temporada por país — do banimento progressivo (Barcelona) ao registro obrigatório (Nova York), passando por
+  tributação (Itália), licenciamento (Escócia, Alemanha) e saída de mercado (China). Cada card traz os documentos
+  do acervo. Benchmarks normativos (UE 2024/1028 e Nova York) estão também na aba Artigos.</p>
+
+  <div class="editorial-note neutral">📰 Panoramas gerais: <a class="doc-link" style="margin-right:12px" href="clippings/regulacao-por-pais/Airbnb_%20as%20cidades%20que%20decidiram%20banir%20os%20alugu%C3%A9is%20de%20curto%20prazo%20para%20turistas%20-%20BBC%20News%20Brasil.pdf" target="_blank" rel="noopener">📄 panorama 1 ↗</a><a class="doc-link" style="margin-right:12px" href="clippings/regulacao-por-pais/As%20cidades%20que%20decidiram%20banir%20o%20Airbnb%20_%20Mundo%20_%20%C3%89poca%20NEG%C3%93CIOS.pdf" target="_blank" rel="noopener">📄 panorama 2 ↗</a></div>
+
+  <div class="filter-bar">
+    <input type="text" id="search-mundo" placeholder="Buscar país ou medida…" oninput="filterCards('mundo-grid','search-mundo')">
+  </div>
+
+  <div class="cards-grid" id="mundo-grid">
+    <div class="card" style="border-left-color:#1E88E5">
+      <div class="card-top"><span class="badge badge-federal">🇧🇷 Brasil</span><span class="badge badge-tramitando">Quórum de 2/3 + ISS</span></div>
+      <h3>Brasil — jurisprudência e leis municipais</h3>
+      <p>STJ exige aprovação de 2/3 dos condôminos para curta temporada em condomínio residencial; municípios (Petrópolis, Salvador, Fortaleza, Florianópolis) avançam em ISS e cadastro. Reforma Tributária aproxima o short stay da hotelaria.</p>
+      <div class="card-footer" style="display:block"><a class="doc-link" style="display:block;margin-top:4px" href="clippings/regulacao-por-pais/Brasil/STJ%20mant%C3%A9m%20decis%C3%A3o%20que%20proibiu%20alugar%20Airbnb%20sem%20autoriza%C3%A7%C3%A3o%20do%20condom%C3%ADnio%20_%20Brasil%20_%20%C3%89poca%20NEG%C3%93CIOS.pdf" target="_blank" rel="noopener">📄 documento 1 ↗</a><a class="doc-link" style="display:block;margin-top:4px" href="clippings/regulacao-por-pais/Brasil/Startup%20que%20gerencia%20apartamentos%20para%20Airbnb%20cresce%20100%25%20ao%20ano%20desde%202020%20_%20Startups%20_%20%C3%89poca%20NEG%C3%93CIOS.pdf" target="_blank" rel="noopener">📄 documento 2 ↗</a></div>
+    </div>
+    <div class="card" style="border-left-color:#1E88E5">
+      <div class="card-top"><span class="badge badge-federal">🇪🇸 Espanha</span><span class="badge badge-tramitando">Restrição severa</span></div>
+      <h3>Espanha — Barcelona ruma ao banimento</h3>
+      <p>Barcelona anunciou o fim das licenças de aluguel de curta duração para turistas até 2028, retirando ~10 mil apartamentos do mercado para conter a alta dos aluguéis. Modelo de banimento progressivo.</p>
+      <div class="card-footer" style="display:block"><a class="doc-link" style="display:block;margin-top:4px" href="clippings/regulacao-por-pais/Espanha/Aprueban%20pago%20de%20impuestos%20de%20Airbnb%20y%20creaci%C3%B3n%20de%20tabulador%20para%20gr%C3%BAas%20y%20corralones%20_%20El%20Heraldo%20de%20Puebla.pdf" target="_blank" rel="noopener">📄 documento 1 ↗</a><a class="doc-link" style="display:block;margin-top:4px" href="clippings/regulacao-por-pais/Espanha/Barcelona%20mayor%20vows%20to%20abolish%20holiday%20lets.pdf" target="_blank" rel="noopener">📄 documento 2 ↗</a><a class="doc-link" style="display:block;margin-top:4px" href="clippings/regulacao-por-pais/Espanha/N%C3%B4mades%20digitais%20e%20aluguel%20em%20d%C3%B3lar_%20por%20que%20moradores%20est%C3%A3o%20sendo%20expulsos%20de%20seus%20bairros%20na%20Am%C3%A9rica%20Latina%20-%20BBC%20News%20Brasil.pdf" target="_blank" rel="noopener">📄 documento 3 ↗</a></div>
+    </div>
+    <div class="card" style="border-left-color:#1E88E5">
+      <div class="card-top"><span class="badge badge-federal">🇺🇸 Estados Unidos</span><span class="badge badge-tramitando">Registro + bloqueio</span></div>
+      <h3>Estados Unidos — Nova York praticamente baniu</h3>
+      <p>A Local Law 18 de Nova York (2023) exige registro do anfitrião e proíbe estadias abaixo de 30 dias sem o host presente; plataformas só podem processar reservas de imóveis registrados. Resultado: colapso da oferta de curta duração na cidade.</p>
+      <div class="card-footer" style="display:block"><a class="doc-link" style="display:block;margin-top:4px" href="clippings/regulacao-por-pais/Estados-Unidos/Manchester_%20Unruly%20Airbnb%20guests%20ruining%20lives%20-%20councillor.pdf" target="_blank" rel="noopener">📄 documento 1 ↗</a><a class="doc-link" style="display:block;margin-top:4px" href="clippings/regulacao-por-pais/Estados-Unidos/New%20York%20City%E2%80%99s%20crackdown%20on%20Airbnb%20and%20short-term%20rentals%20goes%20into%20effect%20_%20New%20York%20_%20The%20Guardian.pdf" target="_blank" rel="noopener">📄 documento 2 ↗</a><a class="doc-link" style="display:block;margin-top:4px" href="clippings/regulacao-por-pais/Estados-Unidos/The%20End%20of%20Airbnb%20in%20New%20York%20_%20WIRED.pdf" target="_blank" rel="noopener">📄 documento 3 ↗</a></div>
+    </div>
+    <div class="card" style="border-left-color:#1E88E5">
+      <div class="card-top"><span class="badge badge-federal">🇮🇹 Italia</span><span class="badge badge-tramitando">Tributação + limites</span></div>
+      <h3>Itália — código nacional e cerco fiscal</h3>
+      <p>Código de identificação nacional (CIN) obrigatório, acordo de €576 mi com o fisco e apreensões por evasão; Florença chegou a barrar novos Airbnb no centro histórico (norma depois derrubada). Forte ênfase tributária.</p>
+      <div class="card-footer" style="display:block"><a class="doc-link" style="display:block;margin-top:4px" href="clippings/regulacao-por-pais/Italia/Airbnb%20to%20pay%20Italy%20%E2%82%AC576m%20to%20settle%20tax%20dispute.pdf" target="_blank" rel="noopener">📄 documento 1 ↗</a><a class="doc-link" style="display:block;margin-top:4px" href="clippings/regulacao-por-pais/Italia/Floren%C3%A7a%20pro%C3%ADbe%20novos%20im%C3%B3veis%20Airbnb%20em%20centro%20hist%C3%B3rico%20-%20Viagem%20e%20Turismo%20-%20Ansa.it.pdf" target="_blank" rel="noopener">📄 documento 2 ↗</a><a class="doc-link" style="display:block;margin-top:4px" href="clippings/regulacao-por-pais/Italia/Italy%20to%20seize%20%24835m%20from%20Airbnb%20in%20tax%20evasion%20inquiry.pdf" target="_blank" rel="noopener">📄 documento 3 ↗</a></div>
+    </div>
+    <div class="card" style="border-left-color:#1E88E5">
+      <div class="card-top"><span class="badge badge-federal">🇩🇪 Alemanha</span><span class="badge badge-tramitando">Licença obrigatória</span></div>
+      <h3>Alemanha — proibição de uso indevido</h3>
+      <p>Berlim aplica a Zweckentfremdungsverbot: alugar imóvel residencial inteiro por curta temporada exige licença; descumprimento gera multas pesadas. Foco em preservar moradia.</p>
+      <div class="card-footer" style="display:block"><a class="doc-link" style="display:block;margin-top:4px" href="clippings/regulacao-por-pais/Alemanha/Berlin%20cracks%20down%20on%20Airbnb%20rentals%20-%20BBC%20News.pdf" target="_blank" rel="noopener">📄 documento 1 ↗</a></div>
+    </div>
+    <div class="card" style="border-left-color:#1E88E5">
+      <div class="card-top"><span class="badge badge-federal">🇨🇦 Canada</span><span class="badge badge-tramitando">Registro + fiscalização</span></div>
+      <h3>Canadá — Quebec endurece após tragédia</h3>
+      <p>Após incêndio fatal em prédio com unidades irregulares (2023), Quebec passou a exigir número de registro visível no anúncio e responsabilizar plataformas por anúncios sem registro.</p>
+      <div class="card-footer" style="display:block"><a class="doc-link" style="display:block;margin-top:4px" href="clippings/regulacao-por-pais/Canada/Quebec%27s%20new%20Airbnb%20rules%20in%20full%20effect%20_%20CTV%20News.pdf" target="_blank" rel="noopener">📄 documento 1 ↗</a></div>
+    </div>
+    <div class="card" style="border-left-color:#1E88E5">
+      <div class="card-top"><span class="badge badge-federal">🏴 Escocia</span><span class="badge badge-tramitando">Licença + zona de controle</span></div>
+      <h3>Escócia — licenciamento em Edimburgo</h3>
+      <p>A Escócia instituiu licenciamento obrigatório de short-term lets; Edimburgo criou área de controle exigindo planning permission. Donos chegaram a contestar as regras na Justiça.</p>
+      <div class="card-footer" style="display:block"><a class="doc-link" style="display:block;margin-top:4px" href="clippings/regulacao-por-pais/Escocia/Airbnb_%20Holiday%20homes%20face%20new%20safety%20licensing%20rules.pdf" target="_blank" rel="noopener">📄 documento 1 ↗</a><a class="doc-link" style="display:block;margin-top:4px" href="clippings/regulacao-por-pais/Escocia/Edinburgh%20Council%20amends%20%27unlawful%27%20short-term%20lets%20plan.pdf" target="_blank" rel="noopener">📄 documento 2 ↗</a><a class="doc-link" style="display:block;margin-top:4px" href="clippings/regulacao-por-pais/Escocia/Edinburgh%20council%20considers%20bin%20tax%20on%20Airbnb%20hosts.pdf" target="_blank" rel="noopener">📄 documento 3 ↗</a></div>
+    </div>
+    <div class="card" style="border-left-color:#1E88E5">
+      <div class="card-top"><span class="badge badge-federal">🇬🇧 Reino Unido</span><span class="badge badge-tramitando">Registro em debate</span></div>
+      <h3>Reino Unido — rumo a registro e planejamento</h3>
+      <p>O Reino Unido encaminha esquema de registro obrigatório de short-term lets e possível exigência de planning permission para mudança de uso, buscando dados e controle de impacto.</p>
+      <div class="card-footer" style="display:block"><a class="doc-link" style="display:block;margin-top:4px" href="clippings/regulacao-por-pais/Reino-Unido/Massive%20change%20to%20Airbnb%20rules%20likely%20be%20agreed%20next%20.._.pdf" target="_blank" rel="noopener">📄 documento 1 ↗</a></div>
+    </div>
+    <div class="card" style="border-left-color:#1E88E5">
+      <div class="card-top"><span class="badge badge-federal">🇨🇳 China</span><span class="badge badge-tramitando">Saída do mercado</span></div>
+      <h3>China — Airbnb encerrou a operação local</h3>
+      <p>Em 2022 o Airbnb encerrou as operações domésticas na China em meio à concorrência local e ao ambiente regulatório, mantendo apenas viagens de saída (outbound).</p>
+      <div class="card-footer" style="display:block"><a class="doc-link" style="display:block;margin-top:4px" href="clippings/regulacao-por-pais/China/Airbnb%20encerra%20opera%C3%A7%C3%B5es%20na%20China%20-%20%C3%89poca%20Neg%C3%B3cios%20_%20Empresa.pdf" target="_blank" rel="noopener">📄 documento 1 ↗</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
      ACERVO DE DOCUMENTOS
 ═══════════════════════════════════════════ -->
 <section id="acervo" class="section">
@@ -1278,9 +1397,12 @@
 
 <div class="modal-overlay" id="modal-sp-decreto-2025"><div class="modal"><div class="modal-header"><div><div class="modal-tags"><span class="badge badge-decreto">Decreto</span><span class="badge badge-municipal">São Paulo</span><span class="badge badge-vigente">Vigente</span></div><h2>Decreto 64.244/2025 — São Paulo</h2></div><button class="modal-close" onclick="closeModal('modal-sp-decreto-2025')">✕</button></div><div class="modal-body"><div class="modal-section"><h4>Ementa</h4><p>Proíbe o uso de unidades de <b>Habitação de Interesse Social (HIS)</b> e de <b>Habitação de Mercado Popular (HMP)</b> para hospedagem de curtíssima duração via plataformas digitais.</p></div><div class="modal-section"><h4>Justificativa</h4><p>A conversão de habitação popular em aluguel de temporada reduz o estoque de moradias acessíveis e agrava o déficit habitacional. O decreto protege a função social da habitação subsidiada.</p></div><div class="modal-section"><h4>Sanções</h4><p>Multa e possível perda do benefício habitacional; plataformas notificadas para remover anúncios de imóveis HIS/HMP.</p></div></div><div class="modal-footer"><button class="btn btn-secondary" onclick="closeModal('modal-sp-decreto-2025')">Fechar</button></div></div></div>
 
-<div class="modal-overlay" id="modal-sp-diego-pl"><div class="modal"><div class="modal-header"><div><div class="modal-tags"><span class="badge badge-pl">PL</span><span class="badge badge-municipal">São Paulo</span><span class="badge badge-tramitando">Em Tramitação</span></div><h2>PL Diego — Hospedagem e Plataformas (São Paulo)</h2></div><button class="modal-close" onclick="closeModal('modal-sp-diego-pl')">✕</button></div><div class="modal-body"><div class="modal-section"><h4>Conteúdo</h4><p>Projeto de lei municipal sobre hospedagem e plataformas digitais de aluguel por temporada em São Paulo, no contexto do debate sobre cadastro, fiscalização e tributação.</p></div></div><div class="modal-footer"><a class="btn btn-primary" href="legislacao-brasil/municipios/sao-paulo-sp/Projeto%20de%20Lei%20Diego%20Hospedagem%20e%20Plataformas.docx" target="_blank" rel="noopener">📄 Abrir documento no acervo</a><button class="btn btn-secondary" onclick="closeModal('modal-sp-diego-pl')">Fechar</button></div></div></div>
+<div class="modal-overlay" id="modal-sp-diego-pl"><div class="modal"><div class="modal-header"><div><div class="modal-tags"><span class="badge badge-pl">PL</span><span class="badge badge-municipal">São Roque/SP</span><span class="badge badge-tramitando">Em Tramitação</span></div><h2>PL 2/2025-L — Estância Turística de São Roque (Vereador Diego Gouveia)</h2></div><button class="modal-close" onclick="closeModal('modal-sp-diego-pl')">✕</button></div><div class="modal-body"><div class="modal-section"><h4>Conteúdo</h4><p>De autoria do vereador <b>Diego Gouveia da Costa</b>, dispõe sobre instrumentos complementares de <b>proteção ao consumidor</b> nos serviços de hospedagem e locação por temporada no Município da Estância Turística de São Roque (SP), diante da expansão das plataformas digitais.</p></div><div class="modal-section"><h4>Observação</h4><p>É um projeto <b>municipal de São Roque/SP</b> — não da capital. Correção de classificação feita a partir da exposição de motivos do próprio documento.</p></div></div><div class="modal-footer"><a class="btn btn-primary" href="legislacao-brasil/municipios/sao-paulo-sp/Projeto%20de%20Lei%20Diego%20Hospedagem%20e%20Plataformas.docx" target="_blank" rel="noopener">📄 Abrir documento no acervo</a><button class="btn btn-secondary" onclick="closeModal('modal-sp-diego-pl')">Fechar</button></div></div></div>
 
-<div class="modal-overlay" id="modal-rj-pl-2024"><div class="modal"><div class="modal-header"><div><div class="modal-tags"><span class="badge badge-pl">PL</span><span class="badge badge-municipal">Rio de Janeiro</span><span class="badge badge-tramitando">Em Tramitação</span></div><h2>PL — Câmara Municipal do Rio de Janeiro (Cadastro de Anfitriões)</h2></div><button class="modal-close" onclick="closeModal('modal-rj-pl-2024')">✕</button></div><div class="modal-body"><div class="modal-section"><h4>Conteúdo</h4><p>Institui cadastro municipal obrigatório para proprietários que oferecem imóveis em plataformas de curta temporada no Rio, com informações sobre o imóvel e os hóspedes.</p></div><div class="modal-section"><h4>Ponto Polêmico Retirado</h4><p>A versão inicial previa restrição na orla carioca (Zona Sul e Barra). Após pressão de anfitriões, plataformas e imobiliárias, a proibição na orla foi retirada do texto final.</p></div></div><div class="modal-footer"><button class="btn btn-secondary" onclick="closeModal('modal-rj-pl-2024')">Fechar</button></div></div></div>
+<div class="modal-overlay" id="modal-rj-pl-372"><div class="modal"><div class="modal-header"><div><div class="modal-tags"><span class="badge badge-pl">PL</span><span class="badge badge-municipal">Rio de Janeiro</span><span class="badge badge-tramitando">Em Tramitação</span></div><h2>PL 372/2025 — Câmara Municipal do Rio (substitutivo do PL 107/25)</h2></div><button class="modal-close" onclick="closeModal('modal-rj-pl-372')">✕</button></div><div class="modal-body"><div class="modal-section"><h4>Conteúdo</h4><p>Substitutivo de autoria do vereador <b>Salvino Oliveira (PSD)</b> que regulamenta a hospedagem/locação de curta temporada no Município do Rio de Janeiro (cadastro, ISS, regras operacionais). É o <b>texto novo</b> que sucede a primeira versão (PL 107/25), arquivada.</p></div><div class="modal-section"><h4>Cronologia</h4><p>O documento de cronologia reúne marcos do PL 372/2025 e decisões judiciais relacionadas ao ISS sobre plataformas (reuniões com a Receita Rio, simpósio no ExpoRIO, Comissão Especial).</p></div></div><div class="modal-footer"><a class="btn btn-primary" href="legislacao-brasil/projetos-de-lei/Projetos%20de%20Lei%20372-2025.pdf" target="_blank" rel="noopener">📄 PL 372/2025 (acervo)</a><a class="btn btn-primary" href="legislacao-brasil/projetos-de-lei/cronologia_PL107_profissional.docx" target="_blank" rel="noopener">📄 Cronologia PL 107/372</a><button class="btn btn-secondary" onclick="closeModal('modal-rj-pl-372')">Fechar</button></div></div></div>
+<div class="modal-overlay" id="modal-rj-pl-107"><div class="modal"><div class="modal-header"><div><div class="modal-tags"><span class="badge badge-pl">PL</span><span class="badge badge-municipal">Rio de Janeiro</span><span class="badge badge-arquivado">Arquivado</span></div><h2>PL 107/2025 — Câmara Municipal do Rio (1ª versão, Salvino Oliveira)</h2></div><button class="modal-close" onclick="closeModal('modal-rj-pl-107')">✕</button></div><div class="modal-body"><div class="modal-section"><h4>Conteúdo</h4><p>Primeira versão (minuta V10022025) que regulamentava os serviços de intermediação e hospedagem de curta temporada (3 a 90 dias) via plataformas no Rio, vedando a atividade em parte das edificações multifamiliares residenciais.</p></div><div class="modal-section"><h4>Situação</h4><p>Arquivada e substituída pelo <b>PL 372/2025</b> (substitutivo).</p></div></div><div class="modal-footer"><a class="btn btn-primary" href="legislacao-brasil/projetos-de-lei/PL%20LOCACAO%20DE%20CURTA%20TEMPORADA%20e%20AIRBNB%20-%20V10022025%20-%20SALVINO.docx" target="_blank" rel="noopener">📄 Minuta Salvino (acervo)</a><button class="btn btn-secondary" onclick="closeModal('modal-rj-pl-107')">Fechar</button></div></div></div>
+<div class="modal-overlay" id="modal-rj-pl-cesarmaia"><div class="modal"><div class="modal-header"><div><div class="modal-tags"><span class="badge badge-pl">PL</span><span class="badge badge-municipal">Rio de Janeiro</span><span class="badge badge-tramitando">Minuta</span></div><h2>Minuta — Vereador Cesar Maia (Rio de Janeiro)</h2></div><button class="modal-close" onclick="closeModal('modal-rj-pl-cesarmaia')">✕</button></div><div class="modal-body"><div class="modal-section"><h4>Conteúdo</h4><p>Anteprojeto que define como <b>atividade empresarial</b> a hospedagem em imóveis residenciais com ocupação episódica ou por até 90 dias, direta ou via corretores/plataformas, no Município do Rio de Janeiro.</p></div></div><div class="modal-footer"><a class="btn btn-primary" href="legislacao-brasil/projetos-de-lei/Minuta-PL-Regulacao-Tributacao-Plataformas-Hospedagem.docx" target="_blank" rel="noopener">📄 Minuta Cesar Maia (acervo)</a><button class="btn btn-secondary" onclick="closeModal('modal-rj-pl-cesarmaia')">Fechar</button></div></div></div>
+<div class="modal-overlay" id="modal-rj-pl-flaviovalle"><div class="modal"><div class="modal-header"><div><div class="modal-tags"><span class="badge badge-pl">PL</span><span class="badge badge-municipal">Rio de Janeiro</span><span class="badge badge-tramitando">Em Tramitação</span></div><h2>PL — Vereador Flávio Valle (Rio de Janeiro)</h2></div><button class="modal-close" onclick="closeModal('modal-rj-pl-flaviovalle')">✕</button></div><div class="modal-body"><div class="modal-section"><h4>Conteúdo</h4><p>Regulamenta o serviço de intermediação de hospedagem e locação por temporada de até 90 dias via plataforma digital, com base na <b>LC 116/2003</b>, exigindo requisitos de intermediadores, inclusive os sediados em outros municípios.</p></div></div><div class="modal-footer"><a class="btn btn-primary" href="legislacao-brasil/projetos-de-lei/PL-Flavio-Valle-Hospedagem-Plataforma-Digital.docx" target="_blank" rel="noopener">📄 PL Flávio Valle (acervo)</a><button class="btn btn-secondary" onclick="closeModal('modal-rj-pl-flaviovalle')">Fechar</button></div></div></div>
 
 <div class="modal-overlay" id="modal-floripa-pl-2025"><div class="modal"><div class="modal-header"><div><div class="modal-tags"><span class="badge badge-pl">PL</span><span class="badge badge-municipal">Florianópolis</span><span class="badge badge-tramitando">Em Tramitação</span></div><h2>PL 04/2025 — Câmara Municipal de Florianópolis</h2></div><button class="modal-close" onclick="closeModal('modal-floripa-pl-2025')">✕</button></div><div class="modal-body"><div class="modal-section"><h4>Conteúdo</h4><p>Cria o cadastro municipal de hospedagem e impõe inscrição obrigatória no <b>Cadastur</b> para anfitriões que operam em plataformas digitais.</p></div><div class="modal-section"><h4>Memorando de Cooperação</h4><p>Em paralelo, a Prefeitura firmou Memorando de Cooperação com o Airbnb em agosto de 2025 para compartilhamento de dados e regularização — modelo que pode influenciar outras cidades.</p></div></div><div class="modal-footer"><button class="btn btn-secondary" onclick="closeModal('modal-floripa-pl-2025')">Fechar</button></div></div></div>
 
