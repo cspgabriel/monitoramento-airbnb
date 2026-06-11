@@ -390,6 +390,41 @@
   }
   .editorial-note.neutral { background: #eef4fb; border-left-color: #0066CC; color: #234; }
 
+  /* ─── REGULAÇÃO AIRBNB ─── */
+  .reg-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 18px 20px;
+    box-shadow: 0 1px 6px rgba(0,0,0,.07);
+    border-left: 4px solid #FF5A5F;
+    display: flex; flex-direction: column;
+  }
+  .reg-card h3 { font-size: 1rem; font-weight: 700; color: #0a1f3a; margin-bottom: 6px; }
+  .reg-card .reg-loc { font-size: .78rem; color: #FF5A5F; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .reg-card p { font-size: .87rem; color: #444; line-height: 1.55; margin-bottom: 10px; }
+  .reg-card .reg-kv { display: grid; grid-template-columns: 1fr; gap: 6px; margin: 6px 0 10px; }
+  .reg-card .reg-kv span { font-size: .78rem; color: #333; background: #f4f7fb; border-radius: 6px; padding: 5px 9px; }
+  .reg-card .reg-kv span b { color: #0066CC; margin-right: 4px; }
+  .reg-card .reg-footer { margin-top: auto; display: flex; gap: 8px; flex-wrap: wrap; padding-top: 10px; border-top: 1px solid #eef2f7; }
+  .reg-card .reg-footer .btn { font-size: .78rem; padding: 6px 12px; }
+  .reg-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+  }
+  .reg-modal .modal-section ul { margin-left: 18px; }
+  .reg-modal .modal-section li { font-size: .88rem; color: #333; line-height: 1.6; margin-bottom: 4px; }
+  .reg-modal .modal-section .integra {
+    background: #fafbfd; border: 1px dashed #cdd6e0; border-radius: 8px;
+    padding: 12px 14px; font-size: .85rem; color: #333; line-height: 1.6; white-space: pre-line;
+  }
+  .reg-legend {
+    display: flex; gap: 14px; flex-wrap: wrap; align-items: center;
+    background: #fff5f5; border-left: 4px solid #FF5A5F; border-radius: 10px;
+    padding: 12px 16px; margin-bottom: 22px; font-size: .85rem; color: #5a1010;
+  }
+  .reg-legend b { color: #FF5A5F; }
+
   @media (max-width: 700px) {
     .header h1 { font-size: 1.4rem; }
     .header { padding: 24px 16px; }
@@ -442,6 +477,7 @@
   <button class="tab-btn" onclick="showTab('todos',this)">Todos os Registros</button>
   <button class="tab-btn" onclick="showTab('clippings',this)">🔴 Clippings</button>
   <button class="tab-btn" onclick="showTab('mundo',this)">🌍 Mundo</button>
+  <button class="tab-btn" onclick="showTab('regulacao-airbnb',this)">🏛️ Regulamentação Airbnb</button>
   <button class="tab-btn" onclick="showTab('acervo',this)">📁 Acervo</button>
 </div>
 
@@ -1350,6 +1386,242 @@
 </section>
 
 <!-- ═══════════════════════════════════════════
+     REGULAMENTAÇÃO OFICIAL — CENTRAL DE AJUDA DO AIRBNB
+═══════════════════════════════════════════ -->
+<section id="regulacao-airbnb" class="section">
+  <p class="section-intro"><b>O que o próprio Airbnb publica sobre a regulamentação local.</b> Espelho consolidado das páginas oficiais da Central de Ajuda do Airbnb (airbnb.com.br/help/article/...) que descrevem requisitos legais, licenças, tributos e limites de noites para anfitriões em cada cidade/país. Cada card traz: <b>(1)</b> resumo visual com os pontos-chave, <b>(2)</b> tabela com licença, imposto e regra principal, e <b>(3)</b> modal com a íntegra do conteúdo capturado da página oficial, com link de origem.</p>
+
+  <div class="reg-legend">
+    <span>🏛️ Fonte: <b>Central de Ajuda do Airbnb</b> (airbnb.com.br/help)</span>
+    <span>📅 Atualizado: <b>jun/2026</b></span>
+    <span>⚠️ Conteúdo informativo — confira sempre a versão vigente no site oficial</span>
+  </div>
+
+  <div class="summary-grid">
+    <div class="summary-card"><div class="num" style="color:#FF5A5F">13</div><div class="lbl">Locais cobertos</div></div>
+    <div class="summary-card"><div class="num" style="color:#0066CC">7</div><div class="lbl">Países</div></div>
+    <div class="summary-card"><div class="num" style="color:#7030A0">4</div><div class="lbl">Modelos regulatórios<br>(licença · tributo · limite · banimento)</div></div>
+    <div class="summary-card"><div class="num" style="color:#00766C">100%</div><div class="lbl">Conteúdo oficial Airbnb</div></div>
+  </div>
+
+  <div class="filter-bar">
+    <input type="text" id="search-reg" placeholder="Buscar cidade, país, licença ou imposto…" oninput="filterCards('reg-grid','search-reg')">
+  </div>
+
+  <div class="reg-grid" id="reg-grid">
+
+    <!-- 1. Brasil — Hospedagem Responsável -->
+    <div class="reg-card" style="border-left-color:#009C3B">
+      <div class="reg-loc">🇧🇷 Brasil · Nacional</div>
+      <h3>Hospedagem responsável no Brasil</h3>
+      <p>Direito constitucional de propriedade + Lei 8.245/1991 permite expressamente aluguel por temporada. Condomínios não podem proibir; STJ exige 2/3 dos condôminos. Imposto sobre renda do aluguel via carnê-leão.</p>
+      <div class="reg-kv">
+        <span><b>Licença:</b> não exigida em nível federal</span>
+        <span><b>Tributo:</b> IRPF (carnê-leão) + ISS municipal</span>
+        <span><b>Regra-chave:</b> art. 1.336 e art. 1.228 do Código Civil; Lei 8.245/91</span>
+      </div>
+      <div class="reg-footer">
+        <button class="btn btn-primary" onclick="openModal('reg-brasil')">📖 Ver íntegra</button>
+        <a class="btn btn-secondary" href="https://www.airbnb.com.br/help/article/2588" target="_blank" rel="noopener">🔗 Fonte oficial</a>
+      </div>
+    </div>
+
+    <!-- 2. Brasil — Experiências -->
+    <div class="reg-card" style="border-left-color:#009C3B">
+      <div class="reg-loc">🇧🇷 Brasil · Experiências</div>
+      <h3>Regras para Experiências no Brasil</h3>
+      <p>Diretrizes para anfitriões que oferecem experiências: bebidas alcoólicas, alimentação, atividades físicas, espaços públicos, guias turísticos e transporte. Guia de turismo requer registro obrigatório no Ministério do Turismo.</p>
+      <div class="reg-kv">
+        <span><b>Licença:</b> CADASTUR · MTur p/ guias e transporte</span>
+        <span><b>Tributo:</b> conforme natureza da atividade</span>
+        <span><b>Regra-chave:</b> Lei Geral do Turismo (11.771/2008)</span>
+      </div>
+      <div class="reg-footer">
+        <button class="btn btn-primary" onclick="openModal('reg-brasil-exp')">📖 Ver íntegra</button>
+        <a class="btn btn-secondary" href="https://www.airbnb.com.br/help/article/4071" target="_blank" rel="noopener">🔗 Fonte oficial</a>
+      </div>
+    </div>
+
+    <!-- 3. Porto -->
+    <div class="reg-card" style="border-left-color:#006600">
+      <div class="reg-loc">🇵🇹 Portugal · Porto</div>
+      <h3>Porto — Alojamento Local + Taxa Turística</h3>
+      <p>Registro obrigatório como Alojamento Local junto ao Turismo de Portugal. Câmara Municipal do Porto criou o cargo de Mediador do Alojamento Local. Taxa Municipal Turística (TMT) entrou em vigor em 1º/dez/2024.</p>
+      <div class="reg-kv">
+        <span><b>Licença:</b> Alojamento Local (n.º RNAL)</span>
+        <span><b>Tributo:</b> TMT €3/noite (máx. €21/hóspede em 7 noites)</span>
+        <span><b>Isenções:</b> &lt;13 anos, motivo médico, PCD ≥60%, peregrinação, refugiados</span>
+      </div>
+      <div class="reg-footer">
+        <button class="btn btn-primary" onclick="openModal('reg-porto')">📖 Ver íntegra</button>
+        <a class="btn btn-secondary" href="https://www.airbnb.com.br/help/article/4047" target="_blank" rel="noopener">🔗 Fonte oficial</a>
+      </div>
+    </div>
+
+    <!-- 4. Lisboa -->
+    <div class="reg-card" style="border-left-color:#006600">
+      <div class="reg-loc">🇵🇹 Portugal · Lisboa</div>
+      <h3>Lisboa — Regras para Experiências</h3>
+      <p>Cinco eixos: alimentação (HACCP), bebidas alcoólicas (multas até €30 mil), passeios guiados (RNAAT/RNAVT), transporte (carteira + seguro) e registro empresarial. Câmara Municipal restringe venda de álcool perto de escolas e postos.</p>
+      <div class="reg-kv">
+        <span><b>Licença:</b> RNAAT (animação) · RNAVT (agência de viagens)</span>
+        <span><b>Tributo:</b> impostos sobre atividade econômica</span>
+        <span><b>Multa álcool:</b> até €30.000 por infração</span>
+      </div>
+      <div class="reg-footer">
+        <button class="btn btn-primary" onclick="openModal('reg-lisboa')">📖 Ver íntegra</button>
+        <a class="btn btn-secondary" href="https://www.airbnb.com.br/help/article/4002" target="_blank" rel="noopener">🔗 Fonte oficial</a>
+      </div>
+    </div>
+
+    <!-- 5. Montgomery County MD — destacado pelo usuário (artigo 3840) -->
+    <div class="reg-card" style="border-left-color:#0066CC">
+      <div class="reg-loc">🇺🇸 EUA · Montgomery County, MD</div>
+      <h3>Montgomery County (Maryland) — Licença STR</h3>
+      <p>Anfitrião precisa de Maryland Sales/Use Tax ID + Room Rental–Transient Tax Application + Licença Residencial de Curta Duração (US$ 325/ano). Imóvel deve ser <b>residência principal</b>. Máx. 6 hóspedes adultos por noite (2 por quarto). Capítulo 54 do Código do Condado.</p>
+      <div class="reg-kv">
+        <span><b>Licença:</b> Short-Term Rental License — US$ 325/ano</span>
+        <span><b>Tributo:</b> Room Rental–Transient Tax — 7% da receita</span>
+        <span><b>Limite:</b> reservas &lt; 30 dias · ADU proibido</span>
+      </div>
+      <div class="reg-footer">
+        <button class="btn btn-primary" onclick="openModal('reg-montgomery')">📖 Ver íntegra</button>
+        <a class="btn btn-secondary" href="https://www.airbnb.com.br/help/article/3840" target="_blank" rel="noopener">🔗 Fonte oficial</a>
+      </div>
+    </div>
+
+    <!-- 6. Austin TX — destacado pelo usuário (artigo 3348) -->
+    <div class="reg-card" style="border-left-color:#0066CC">
+      <div class="reg-loc">🇺🇸 EUA · Austin, TX</div>
+      <h3>Austin (Texas) — Licença STR Municipal</h3>
+      <p>Aluguel de curta duração é definido como locação de unidade residencial por menos de 30 dias consecutivos. Anfitrião precisa obter Licença STR da prefeitura e recolher Hotel Occupancy Tax. Cidade publica fluxo eletrônico de cadastro.</p>
+      <div class="reg-kv">
+        <span><b>Licença:</b> Austin STR License (prefeitura)</span>
+        <span><b>Tributo:</b> Hotel Occupancy Tax — 11% (Austin) + 6% (TX)</span>
+        <span><b>Limite:</b> reservas &lt; 30 dias = STR</span>
+      </div>
+      <div class="reg-footer">
+        <button class="btn btn-primary" onclick="openModal('reg-austin')">📖 Ver íntegra</button>
+        <a class="btn btn-secondary" href="https://www.airbnb.com.br/help/article/3348" target="_blank" rel="noopener">🔗 Fonte oficial</a>
+      </div>
+    </div>
+
+    <!-- 7. Texas estadual — destacado pelo usuário (artigo 2331) -->
+    <div class="reg-card" style="border-left-color:#0066CC">
+      <div class="reg-loc">🇺🇸 EUA · Texas (estadual + municipal)</div>
+      <h3>Texas — Recolhimento e repasse pelo Airbnb</h3>
+      <p>Airbnb recolhe e repassa Hotel Occupancy Tax estadual (6%) + impostos sobre vendas (6,25% + até 2% municipal). Em cidades incorporadas (Austin 11%, San Antonio 9%, Houston 7%) e condados como Comal (3%) e Harris (até 7%), há recolhimento automático.</p>
+      <div class="reg-kv">
+        <span><b>Estadual:</b> 6% Hotel Occupancy Tax (≤29 noites)</span>
+        <span><b>Vendas:</b> 6,25% estadual + até 2% local sobre taxas de serviço</span>
+        <span><b>Municipal:</b> Austin 11% · San Antonio 9% · Houston 7%</span>
+      </div>
+      <div class="reg-footer">
+        <button class="btn btn-primary" onclick="openModal('reg-texas')">📖 Ver íntegra</button>
+        <a class="btn btn-secondary" href="https://www.airbnb.com.br/help/article/2331" target="_blank" rel="noopener">🔗 Fonte oficial</a>
+      </div>
+    </div>
+
+    <!-- 8. Berlim -->
+    <div class="reg-card" style="border-left-color:#000000">
+      <div class="reg-loc">🇩🇪 Alemanha · Berlim</div>
+      <h3>Berlim — Permissão obrigatória (Zweckentfremdungsverbot)</h3>
+      <p>Lei contra o uso indevido de moradia: alugar residência inteira por curta temporada exige permissão do escritório do distrito (Bezirksamt). Residência secundária pode ser alugada por até 90 dias/ano. Multas pesadas por descumprimento.</p>
+      <div class="reg-kv">
+        <span><b>Licença:</b> Genehmigung do Bezirksamt (n.º obrigatório no anúncio)</span>
+        <span><b>Limite:</b> residência secundária — máx. 90 dias/ano</span>
+        <span><b>Base legal:</b> Zweckentfremdungsverbot-Gesetz (ZwVbG)</span>
+      </div>
+      <div class="reg-footer">
+        <button class="btn btn-primary" onclick="openModal('reg-berlim')">📖 Ver íntegra</button>
+        <a class="btn btn-secondary" href="https://www.airbnb.com.br/help/article/854" target="_blank" rel="noopener">🔗 Fonte oficial</a>
+      </div>
+    </div>
+
+    <!-- 9. Amsterdam + Londres — limites de noite -->
+    <div class="reg-card" style="border-left-color:#FF8C00">
+      <div class="reg-loc">🇳🇱🇬🇧 Amsterdã + Londres</div>
+      <h3>Limites automáticos de noites por ano</h3>
+      <p>O Airbnb aplica <b>limite automático</b> de noites para o aluguel da casa inteira: 30 noites/ano em Amsterdã (após reforma de 2019, antes 60) e 90 noites/ano em Londres. Para ir além é preciso licença municipal específica.</p>
+      <div class="reg-kv">
+        <span><b>Amsterdã:</b> 30 noites/ano (casa inteira)</span>
+        <span><b>Londres:</b> 90 noites/ano (Greater London Council Act 1973 / Deregulation Act 2015)</span>
+        <span><b>Aplicação:</b> bloqueio automático pela plataforma</span>
+      </div>
+      <div class="reg-footer">
+        <button class="btn btn-primary" onclick="openModal('reg-ams-lon')">📖 Ver íntegra</button>
+        <a class="btn btn-secondary" href="https://www.airbnb.com.br/help/article/1628" target="_blank" rel="noopener">🔗 Fonte oficial</a>
+      </div>
+    </div>
+
+    <!-- 10. New Orleans -->
+    <div class="reg-card" style="border-left-color:#0066CC">
+      <div class="reg-loc">🇺🇸 EUA · New Orleans, LA</div>
+      <h3>Nova Orleans — Dois níveis de licença (Operador + Proprietário)</h3>
+      <p>Aluguéis de menos de 30 noites exigem <b>duas</b> licenças: OSTR (Operador) + NSTR/CSTR (Proprietário). NSTR (zona residencial): US$ 500, 1 por quadra. CSTR (zona não residencial): US$ 1.000, até 5 quartos. Loteria trimestral quando há disputa por quadra. Antigas ISTR/RSTR <b>não</b> são mais aceitas.</p>
+      <div class="reg-kv">
+        <span><b>Licença:</b> OSTR (operador) + NSTR US$ 500 ou CSTR US$ 1.000</span>
+        <span><b>Tributo:</b> Airbnb recolhe automaticamente desde 2017</span>
+        <span><b>Limite:</b> reservas &lt; 30 noites · 1 NSTR por quadra</span>
+      </div>
+      <div class="reg-footer">
+        <button class="btn btn-primary" onclick="openModal('reg-neworleans')">📖 Ver íntegra</button>
+        <a class="btn btn-secondary" href="https://www.airbnb.com.br/help/article/867" target="_blank" rel="noopener">🔗 Fonte oficial</a>
+      </div>
+    </div>
+
+    <!-- 11. Buenos Aires -->
+    <div class="reg-card" style="border-left-color:#74ACDF">
+      <div class="reg-loc">🇦🇷 Argentina · Buenos Aires (CABA)</div>
+      <h3>Buenos Aires — Registro ATT obrigatório (Lei 6.255)</h3>
+      <p>Lei nº 6255 e Resolução ENTUR 8/25 regulam o Alquiler Temporario Turístico (ATT) — hospedagens de 1 noite a 3 meses. Registro obrigatório no Registro de Imóveis ATT (gratuito, virtual via TAD). Operações em curso têm 180 dias a partir de 1º/fev/2025. Número de registro obrigatório em todos os anúncios.</p>
+      <div class="reg-kv">
+        <span><b>Licença:</b> Registro ATT (gratuito · sistema TAD)</span>
+        <span><b>Seguro:</b> responsabilidade civil obrigatório</span>
+        <span><b>Limite:</b> 1 noite a 3 meses · registro de hóspedes 5 anos</span>
+      </div>
+      <div class="reg-footer">
+        <button class="btn btn-primary" onclick="openModal('reg-buenosaires')">📖 Ver íntegra</button>
+        <a class="btn btn-secondary" href="https://www.airbnb.com.br/help/article/2986" target="_blank" rel="noopener">🔗 Fonte oficial</a>
+      </div>
+    </div>
+
+    <!-- 12. Toronto -->
+    <div class="reg-card" style="border-left-color:#D52B1E">
+      <div class="reg-loc">🇨🇦 Canadá · Toronto</div>
+      <h3>Toronto — Bylaw PG24.8 · Residência principal apenas</h3>
+      <p>STR (menos de 28 noites) só é permitido se o imóvel for a <b>residência principal</b> do anfitrião. Registro municipal obrigatório (CAD$ 50/ano). Casa inteira limitada a 180 noites/ano (aluguel só de quarto não tem limite). Recolhe Municipal Accommodation Tax (MAT) de 4%.</p>
+      <div class="reg-kv">
+        <span><b>Licença:</b> Registro municipal — CAD$ 50/ano</span>
+        <span><b>Tributo:</b> Municipal Accommodation Tax — 4%</span>
+        <span><b>Limite:</b> casa inteira — máx. 180 noites/ano · residência principal</span>
+      </div>
+      <div class="reg-footer">
+        <button class="btn btn-primary" onclick="openModal('reg-toronto')">📖 Ver íntegra</button>
+        <a class="btn btn-secondary" href="https://www.airbnb.com.br/help/article/2158" target="_blank" rel="noopener">🔗 Fonte oficial</a>
+      </div>
+    </div>
+
+    <!-- 13. Geral -->
+    <div class="reg-card" style="border-left-color:#7030A0">
+      <div class="reg-loc">🌐 Geral · Todos os países</div>
+      <h3>Que regulamentações se aplicam à minha cidade?</h3>
+      <p>Página-mãe da Central de Ajuda. O Airbnb orienta que em muitas cidades o anfitrião precisa registrar, obter licença ou alvará antes de anunciar. Não fornece aconselhamento jurídico, mas indica que cabe ao anfitrião verificar regras locais.</p>
+      <div class="reg-kv">
+        <span><b>Diretriz:</b> verificar leis municipais, estaduais e federais</span>
+        <span><b>Responsabilidade:</b> integralmente do anfitrião</span>
+        <span><b>Recurso:</b> Central de Ajuda · Termos de Serviço</span>
+      </div>
+      <div class="reg-footer">
+        <button class="btn btn-primary" onclick="openModal('reg-geral')">📖 Ver íntegra</button>
+        <a class="btn btn-secondary" href="https://www.airbnb.com.br/help/article/961" target="_blank" rel="noopener">🔗 Fonte oficial</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
      ACERVO DE DOCUMENTOS
 ═══════════════════════════════════════════ -->
 <section id="acervo" class="section">
@@ -1367,6 +1639,563 @@
 </section>
 
 </div><!-- /container -->
+
+<!-- ═══════════════════════════════════════════
+     MODAIS — REGULAÇÃO AIRBNB
+═══════════════════════════════════════════ -->
+
+<div id="modal-reg-brasil" class="modal-overlay reg-modal">
+  <div class="modal">
+    <div class="modal-header"><h2>🇧🇷 Brasil — Hospedagem Responsável no Airbnb</h2><button class="modal-close" onclick="closeModal('modal-reg-brasil')">×</button></div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <h4>🎯 Resumo visual</h4>
+        <ul>
+          <li><b>Direito de alugar garantido:</b> Constituição (direito de propriedade) + Lei 8.245/1991.</li>
+          <li><b>Aluguel por temporada:</b> autorizado para períodos até 90 dias, sem prazo mínimo.</li>
+          <li><b>Condomínios:</b> não podem proibir locação por plataformas; tribunais reafirmam direito constitucional.</li>
+          <li><b>Tributação:</b> declaração de renda extra via carnê-leão; Airbnb oferece guia tributário em português.</li>
+          <li><b>AirCover:</b> proteção básica do anfitrião — NÃO substitui seguro residencial.</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>📜 Conteúdo na íntegra (Central de Ajuda Airbnb)</h4>
+        <div class="integra">A lei brasileira protege o direito de alugar a sua propriedade. A Constituição assegura o direito de propriedade, e a Lei Federal nº 8.245/1991 permite expressamente tanto a locação por prazo determinado quanto a locação por temporada, sem prazo mínimo.
+
+Pontos legais centrais:
+• Condomínios não podem proibir aluguéis de curta duração por plataformas como o Airbnb;
+• Tribunais brasileiros têm reiteradamente decidido que restrições a aluguel violam o direito constitucional de propriedade;
+• O Código Civil estabelece que o proprietário pode "usar, gozar e dispor" de sua unidade livremente.
+
+Obrigações fiscais: conforme os Termos de Serviço do Airbnb, o anfitrião é responsável pela declaração de tributos sobre a renda do aluguel. Deve declarar a renda extra via carnê-leão e consultar profissional tributário. O Airbnb disponibiliza um guia fiscal gratuito em português.
+
+Relação com o condomínio: ainda que o aluguel seja um direito, recomenda-se boa convivência — entregar regras do condomínio aos hóspedes, garantir respeito às áreas comuns e comunicar eventuais restrições previstas em lei local (não pelo condomínio).
+
+Seguro: o AirCover oferece proteção básica contra danos e responsabilidade civil. NÃO substitui o seguro residencial padrão. Verifique se a sua apólice cobre aluguel de curta duração e consulte o corretor.
+
+Canal de contato para dúvidas: hls-br@airbnb.com</div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" href="https://www.airbnb.com.br/help/article/2588" target="_blank" rel="noopener">🔗 Página oficial</a>
+      <button class="btn btn-secondary" onclick="closeModal('modal-reg-brasil')">Fechar</button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-reg-brasil-exp" class="modal-overlay reg-modal">
+  <div class="modal">
+    <div class="modal-header"><h2>🇧🇷 Brasil — Regras para Experiências Airbnb</h2><button class="modal-close" onclick="closeModal('modal-reg-brasil-exp')">×</button></div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <h4>🎯 Resumo visual</h4>
+        <ul>
+          <li><b>Bebidas alcoólicas:</b> proibido servir a menores, embriagados ou pessoas com condição de saúde; licença para venda raramente disponível em residência.</li>
+          <li><b>Alimentação:</b> regras sanitárias e de manipulação; perguntar sobre restrições alimentares.</li>
+          <li><b>Atividades físicas/outdoor:</b> registro, certificações, segurança e seguro conforme a atividade.</li>
+          <li><b>Espaços públicos:</b> alvará/licença para levar grupos a monumentos ou áreas públicas.</li>
+          <li><b>Guias turísticos:</b> registro obrigatório no Ministério do Turismo (CADASTUR), após formação técnica.</li>
+          <li><b>Transporte:</b> seguro e registro do veículo; licenças específicas para terrestre, aquaviário e aéreo.</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>📜 Conteúdo na íntegra (Central de Ajuda Airbnb)</h4>
+        <div class="integra">Esta página orienta anfitriões que oferecem Experiências no Brasil em seis frentes:
+
+1. Bebidas alcoólicas — o anfitrião deve priorizar a segurança e recusar servir a menores, embriagados ou pessoas com condições de saúde. A venda de bebidas alcoólicas requer licença, geralmente indisponível para residências particulares.
+
+2. Serviços de alimentação — diferentes jurisdições mantêm normas sanitárias para manipulação de alimentos. Verifique licenciamento local e pergunte sempre sobre restrições alimentares.
+
+3. Atividades ao ar livre e físicas — dependendo da atividade e do local, podem ser exigidos registro, certificações específicas, padrões de segurança e seguros adequados.
+
+4. Espaços públicos — podem ser necessárias autorizações para levar participantes a monumentos ou áreas públicas, com regras que variam conforme local e atividade.
+
+5. Passeios guiados — atuar como guia de turismo requer registro obrigatório no Ministério do Turismo (CADASTUR), obtido apenas após conclusão de formação técnica.
+
+6. Transporte — todos os veículos utilizados em experiências precisam ter seguro e registro ativos. Os requisitos variam para transporte terrestre, aquaviário e aéreo, com licenças específicas para motoristas-guias e operadores de embarcações.
+
+A responsabilidade legal pelo cumprimento é integralmente do anfitrião, que deve consultar fontes oficiais e profissionais jurídicos para sua situação concreta.</div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" href="https://www.airbnb.com.br/help/article/4071" target="_blank" rel="noopener">🔗 Página oficial</a>
+      <button class="btn btn-secondary" onclick="closeModal('modal-reg-brasil-exp')">Fechar</button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-reg-porto" class="modal-overlay reg-modal">
+  <div class="modal">
+    <div class="modal-header"><h2>🇵🇹 Porto — Alojamento Local e Taxa Municipal Turística</h2><button class="modal-close" onclick="closeModal('modal-reg-porto')">×</button></div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <h4>🎯 Resumo visual</h4>
+        <ul>
+          <li><b>Registro obrigatório:</b> acomodação tem de ser registrada como <i>Alojamento Local</i> junto ao Turismo de Portugal, com número RNAL.</li>
+          <li><b>Câmara Municipal do Porto:</b> mantém regras próprias publicadas no boletim eletrônico municipal e nomeou um <i>Mediador do Alojamento Local</i>.</li>
+          <li><b>Taxa Municipal Turística (TMT):</b> €3 por noite, máx. €21 por hóspede por estadia (limite de 7 noites tributadas).</li>
+          <li><b>Isenções TMT:</b> crianças &lt;13 anos, motivo médico, PCD ≥60%, peregrinações religiosas, refugiados/asilados.</li>
+          <li><b>Reembolsos:</b> hóspedes isentos podem solicitar reembolso da TMT via Airbnb.</li>
+          <li><b>Código de conduta:</b> disponível para download — visa convivência entre moradores, proprietários e visitantes.</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>📜 Conteúdo na íntegra (Central de Ajuda Airbnb)</h4>
+        <div class="integra">Esta página detalha as regras para anfitriões que operam alojamentos de curta duração (Alojamento Local) na cidade do Porto.
+
+Principais requisitos:
+• Registro: o anfitrião deve registrar a acomodação como "Alojamento Local" junto à autoridade nacional de turismo (Turismo de Portugal) e obter número de licença válido (RNAL).
+• Regulamentação local: a Câmara Municipal do Porto impõe requisitos específicos, publicados no boletim eletrônico municipal.
+
+Taxa Municipal Turística (TMT) — em vigor desde 1º de dezembro de 2024:
+• Valor: €3 por noite, com máximo de €21 por hóspede por estadia (até 7 noites).
+• Isenções: crianças menores de 13 anos; estadias por motivo médico; pessoas com deficiência igual ou superior a 60%; peregrinações religiosas; refugiados/solicitantes de asilo.
+• Hóspedes em situação de isenção podem solicitar o reembolso através do Airbnb.
+
+Responsabilidades do anfitrião: familiarizar-se com as leis locais e manter seguro de responsabilidade civil. O Porto designou um "Mediador do Alojamento Local" para equilibrar interesses de moradores, proprietários e visitantes; existe ainda um código de conduta de convivência disponível para download.
+
+Recursos: site oficial do Turismo de Portugal e portais governamentais; recomenda-se também consulta a profissionais locais de direito e contabilidade.</div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" href="https://www.airbnb.com.br/help/article/4047" target="_blank" rel="noopener">🔗 Página oficial</a>
+      <button class="btn btn-secondary" onclick="closeModal('modal-reg-porto')">Fechar</button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-reg-lisboa" class="modal-overlay reg-modal">
+  <div class="modal">
+    <div class="modal-header"><h2>🇵🇹 Lisboa — Regras para Experiências Airbnb</h2><button class="modal-close" onclick="closeModal('modal-reg-lisboa')">×</button></div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <h4>🎯 Resumo visual</h4>
+        <ul>
+          <li><b>Alimentação:</b> uso de restaurantes/serviços de catering reconhecidos, higiene, transparência de ingredientes, alergias, HACCP; serviço esporádico pode exigir licença temporária.</li>
+          <li><b>Álcool:</b> proibido a &lt;18 anos e visivelmente embriagados. Multas até <b>€30.000</b>. Câmara Municipal de Lisboa restringe venda perto de escolas e postos de combustível.</li>
+          <li><b>Passeios guiados:</b> atividades turísticas exigem registro como <b>RNAAT</b> (agente de animação) ou <b>RNAVT</b> (agência de viagens), conforme inclusão de transporte/hospedagem. Gestão via Turismo de Portugal.</li>
+          <li><b>Transporte:</b> motoristas ≥18 anos, carteira válida, veículo registrado, seguro de responsabilidade civil obrigatório. Até 9 passageiros com licença simples; mais que isso requer operador adicional. Embarcações exigem licença marítima específica.</li>
+          <li><b>Registro empresarial:</b> toda atividade econômica exige registro fiscal e licenciamento; consumidor deve receber informação transparente e completa.</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>📜 Conteúdo na íntegra (Central de Ajuda Airbnb)</h4>
+        <div class="integra">Experiências de alimentação — o anfitrião deve priorizar a segurança do participante, utilizando restaurantes ou serviços de catering reconhecidos. Responsabilidades incluem higiene alimentar, transparência sobre ingredientes, pergunta sobre alergias e implementação de sistemas HACCP. O serviço ocasional de alimentação pode exigir licenciamento temporário das autoridades.
+
+Experiências com álcool — Portugal regulamenta estritamente a venda. É vedado servir a menores de 18 anos ou a pessoas visivelmente embriagadas. Infrações podem gerar multas de até €30.000. Restrições municipais também se aplicam — por exemplo, "A Câmara Municipal de Lisboa impõe limitações à venda de bebidas alcoólicas" nas proximidades de escolas e postos de combustível.
+
+Passeios guiados — atividades classificadas como turismo exigem registro. O anfitrião normalmente necessita de licença como "agente de animação turística" (RNAAT) ou "agência de viagens" (RNAVT), dependendo de incluir hospedagem ou transporte. Esses registros são geridos pelo Turismo de Portugal.
+
+Experiências de transporte — motoristas devem ter pelo menos 18 anos, carteira válida, veículos registrados e seguro de responsabilidade civil obrigatório. Agentes licenciados podem transportar até 9 pessoas; grupos maiores exigem operador adicional. Operações com embarcações requerem licenças marítimas específicas.
+
+Registro empresarial e deveres ao consumidor — toda atividade econômica exige registro fiscal e licenciamento apropriado. O anfitrião deve cumprir as leis de proteção ao consumidor, prestando informações transparentes e completas sobre os serviços.</div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" href="https://www.airbnb.com.br/help/article/4002" target="_blank" rel="noopener">🔗 Página oficial</a>
+      <button class="btn btn-secondary" onclick="closeModal('modal-reg-lisboa')">Fechar</button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-reg-montgomery" class="modal-overlay reg-modal">
+  <div class="modal">
+    <div class="modal-header"><h2>🇺🇸 Condado de Montgomery (Maryland) — Regulamentação Airbnb</h2><button class="modal-close" onclick="closeModal('modal-reg-montgomery')">×</button></div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <h4>🎯 Resumo visual (3 passos)</h4>
+        <ul>
+          <li><b>Passo 1 — Documentos fiscais:</b> Maryland Sales/Use Tax ID + Room Rental–Transient Tax Application.</li>
+          <li><b>Passo 2 — Licença STR:</b> US$ 325/ano (renovação anual). Número da licença obrigatório em todos os anúncios.</li>
+          <li><b>Passo 3 — Compliance:</b> máx. 6 hóspedes adultos por noite (2 por quarto); imóvel deve ser residência principal; notificar vizinhos adjacentes.</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>⚖️ Regras (Capítulo 54 do Código do Condado)</h4>
+        <ul>
+          <li>Aluguéis devem ter menos de 30 dias consecutivos para classificarem-se como STR.</li>
+          <li>Unidades de Habitação Acessória (ADU) <b>proibidas</b> de uso como aluguel de curta duração.</li>
+          <li>Licença válida por 12 meses, com renovação anual obrigatória.</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>🏙️ Comunidades abrangidas</h4>
+        <p>Inclui: Silver Spring, Bethesda, Potomac, Kenwood, Kensington. <b>Excluídas:</b> Chevy Chase Village, Gaithersburg, Rockville, Poolesville.</p>
+      </div>
+      <div class="modal-section">
+        <h4>💰 Tributação</h4>
+        <ul>
+          <li><b>Room Rental–Transient Tax:</b> 7% sobre toda a receita do aluguel (incluindo taxas da plataforma).</li>
+          <li><b>Prazo:</b> declaração mensal até o último dia do mês seguinte ao período de referência.</li>
+          <li><b>Estado:</b> obrigatório Maryland Sales/Use Tax ID.</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>🛡️ Segurança exigida</h4>
+        <ul>
+          <li>Detectores funcionais de fumaça e monóxido de carbono.</li>
+          <li>Instalações sanitárias operacionais.</li>
+          <li>Regras da casa e contato de emergência afixados.</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>⚠️ Penalidades</h4>
+        <ul>
+          <li>Cancelamento do anúncio e bloqueio de reservas.</li>
+          <li>Autos de infração e multas.</li>
+          <li>Suspensão/revogação da licença em caso de reincidência.</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>🔗 Recursos oficiais</h4>
+        <ul>
+          <li>Licença STR: <a href="https://secure.hostcompliance.com/montgomery-county-md/permit-registration/welcome" target="_blank" rel="noopener">secure.hostcompliance.com/montgomery-county-md</a></li>
+          <li>Transient Tax: <a href="https://ex01.montgomerycountymd.gov/cas/login" target="_blank" rel="noopener">ex01.montgomerycountymd.gov</a></li>
+          <li>Maryland Tax ID: <a href="https://www.marylandtaxes.gov/business/sales-use/index.php" target="_blank" rel="noopener">marylandtaxes.gov</a></li>
+          <li>Código do Condado: <a href="https://codelibrary.amlegal.com/codes/montgomerycounty/latest/montgomeryco_md/0-0-0-153578" target="_blank" rel="noopener">codelibrary.amlegal.com</a></li>
+          <li>Reclamações: MC311 ou 240-777-0311</li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" href="https://www.airbnb.com.br/help/article/3840" target="_blank" rel="noopener">🔗 Página oficial</a>
+      <button class="btn btn-secondary" onclick="closeModal('modal-reg-montgomery')">Fechar</button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-reg-austin" class="modal-overlay reg-modal">
+  <div class="modal">
+    <div class="modal-header"><h2>🇺🇸 Austin (Texas) — Regulamentação Airbnb</h2><button class="modal-close" onclick="closeModal('modal-reg-austin')">×</button></div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <h4>🎯 Resumo visual</h4>
+        <ul>
+          <li><b>Definição:</b> STR é "o aluguel de uma unidade residencial ou prédio acessório por menos de 30 dias consecutivos".</li>
+          <li><b>Licença:</b> anfitriões precisam obter Licença de Operação da prefeitura de Austin.</li>
+          <li><b>Tributo:</b> recolhimento de Hotel Occupancy Tax (11% municipal + 6% estadual = 17%).</li>
+          <li><b>Processo eletrônico:</b> via página oficial de licenciamento STR de Austin.</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>📜 Conteúdo na íntegra (Central de Ajuda Airbnb)</h4>
+        <div class="integra">O anfitrião deve obter uma licença de operação junto ao governo municipal de Austin. A cidade define STR (Short-Term Rental) como "o aluguel de uma unidade residencial ou prédio de acessórios por menos de 30 dias consecutivos".
+
+Passos para obter a licença:
+1. Acessar a página de recursos STR de Austin;
+2. Seguir os links para submissão da solicitação de licença;
+3. Criar conta ou autenticar;
+4. Completar as etapas de registro.
+
+Tributação: "O processo de licenciamento exige que os anfitriões paguem impostos de ocupação do hotel, quando aplicável." Informações disponíveis nas páginas oficiais de Hotel Occupancy Tax de Austin e de Hotel Tax do Estado do Texas.
+
+Recursos oficiais:
+• Licenciamento STR — austintexas.gov/department/license-my-short-term-rental
+• Hotel Occupancy Taxes — austintexas.gov/department/hotel-occupancy-taxes
+• Texas State Hotel Tax — comptroller.texas.gov/taxinfo/hotel
+• Austin Code Compliance — austintexas.gov/department/austin-code-online-resources
+
+Recursos adicionais: Airbnb Safety &amp; Security, Hosting Resources Center e o Austin Area Airbnb Host Facebook Group.</div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" href="https://www.airbnb.com.br/help/article/3348" target="_blank" rel="noopener">🔗 Página oficial</a>
+      <button class="btn btn-secondary" onclick="closeModal('modal-reg-austin')">Fechar</button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-reg-texas" class="modal-overlay reg-modal">
+  <div class="modal">
+    <div class="modal-header"><h2>🇺🇸 Texas — Recolhimento e Repasse de Impostos pelo Airbnb</h2><button class="modal-close" onclick="closeModal('modal-reg-texas')">×</button></div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <h4>🎯 Resumo visual</h4>
+        <ul>
+          <li><b>Estadual:</b> Hotel Occupancy Tax — 6% sobre o preço (incl. limpeza), reservas ≤29 noites.</li>
+          <li><b>Vendas (estadual):</b> 6,25% + até 2% municipal sobre <i>taxas de serviço</i> do Airbnb.</li>
+          <li><b>Condado de Comal:</b> taxa de hospedagem 3%.</li>
+          <li><b>Condado de Harris:</b> Hotel Occupancy Tax 7% (não incorporadas) ou 2% (incorporadas) + Houston Sports Authority Tax 2%.</li>
+          <li><b>Municípios:</b> Austin 11% · San Antonio 9% · Houston 7% · Abilene/Conroe etc. 7–11%.</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>📜 Conteúdo na íntegra (Central de Ajuda Airbnb)</h4>
+        <div class="integra">Estado do Texas — visitantes de acomodações Airbnb no Texas pagam:
+• Imposto de Ocupação de Hotel: 6% do preço do anúncio, incluindo qualquer taxa de limpeza, para reservas de 29 noites ou menos (referência: Controladoria do Texas).
+• Impostos sobre vendas: imposto estadual de 6,25% mais impostos municipais de até 2,0% sobre as taxas de serviço do Airbnb.
+
+Condado de Comal — Taxa de usuário de hospedagem: 3% do preço da acomodação, incluindo taxas de limpeza, para reservas de 29 noites ou menos.
+
+Condado de Harris — Imposto de Ocupação de Hotel: 7% (áreas não incorporadas) ou 2% (áreas incorporadas); Houston Sports Authority Tax: 2%.
+
+Cidades individuais (Abilene, Austin, Conroe, etc.) — cada município lista alíquotas específicas entre 7% e 11%, aplicadas ao preço da acomodação, incluindo taxas de limpeza, para reservas de 29–30 noites ou menos. Exemplos:
+• Austin: 11% do preço da acomodação;
+• San Antonio: 9% do preço da acomodação;
+• Houston: 7% do preço do anúncio.
+
+Disposição importante: os anfitriões dessas regiões são responsáveis por verificar todas as demais obrigações fiscais e devem revisar contratos conforme os Termos de Serviço do Airbnb.</div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" href="https://www.airbnb.com.br/help/article/2331" target="_blank" rel="noopener">🔗 Página oficial</a>
+      <button class="btn btn-secondary" onclick="closeModal('modal-reg-texas')">Fechar</button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-reg-berlim" class="modal-overlay reg-modal">
+  <div class="modal">
+    <div class="modal-header"><h2>🇩🇪 Berlim — Permissão para Alojamento de Curta Duração</h2><button class="modal-close" onclick="closeModal('modal-reg-berlim')">×</button></div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <h4>🎯 Resumo visual</h4>
+        <ul>
+          <li><b>Base legal:</b> <i>Zweckentfremdungsverbot-Gesetz</i> (Lei contra uso indevido de moradia).</li>
+          <li><b>Permissão obrigatória:</b> alugar residência inteira por curta duração exige autorização do escritório do distrito (<i>Bezirksamt</i>).</li>
+          <li><b>Residência secundária:</b> limite de 90 dias por ano de aluguel curto.</li>
+          <li><b>Número da permissão:</b> deve ser exibido em todos os anúncios.</li>
+          <li><b>Sanções:</b> multas administrativas pesadas para anúncios sem licença.</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>📜 Conteúdo na íntegra (Central de Ajuda Airbnb)</h4>
+        <div class="integra">Berlim aplica a chamada <i>Zweckentfremdungsverbot</i> — proibição de uso indevido de imóvel residencial. O anfitrião que pretenda alugar uma residência inteira por curta duração precisa obter uma permissão (<i>Genehmigung</i>) junto ao escritório do seu distrito (<i>Bezirksamt</i>).
+
+Para uma residência secundária, a permissão autoriza aluguel curto por até 90 dias por ano. Em todos os casos, o número da permissão concedida pelo Bezirksamt deve constar do anúncio publicado no Airbnb.
+
+O descumprimento da lei berlinense pode ensejar multas administrativas pesadas e bloqueio do anúncio. Os anfitriões devem consultar o Bezirksamt do distrito onde se localiza o imóvel para conhecer formulários, taxas e prazos.</div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" href="https://www.airbnb.com.br/help/article/854" target="_blank" rel="noopener">🔗 Página oficial</a>
+      <button class="btn btn-secondary" onclick="closeModal('modal-reg-berlim')">Fechar</button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-reg-ams-lon" class="modal-overlay reg-modal">
+  <div class="modal">
+    <div class="modal-header"><h2>🇳🇱🇬🇧 Amsterdã e Londres — Limites de Noites por Ano</h2><button class="modal-close" onclick="closeModal('modal-reg-ams-lon')">×</button></div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <h4>🎯 Resumo visual</h4>
+        <ul>
+          <li><b>Amsterdã:</b> casa inteira limitada a <b>30 noites/ano</b> (redução de 60 para 30 a partir de 1º/jan/2019).</li>
+          <li><b>Londres:</b> casa inteira limitada a <b>90 noites/ano</b> (Deregulation Act 2015).</li>
+          <li><b>Aplicação automática:</b> a plataforma bloqueia automaticamente reservas que ultrapassem o limite.</li>
+          <li><b>Exceções:</b> licença municipal específica permite ultrapassar o teto.</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>📜 Conteúdo na íntegra (Central de Ajuda Airbnb)</h4>
+        <div class="integra">Aluguéis de curta duração anunciados como "casa inteira" (Entire place) têm limite anual de 90 noites em Londres e de 60 noites em Amsterdã. Em 1º de janeiro de 2019, a cidade de Amsterdã aprovou uma redução: casas inteiras só podem ser alugadas por até 30 noites por ano.
+
+A plataforma Airbnb aplica automaticamente esse teto. Em Londres, o limite de 90 dias é aplicado automaticamente quando o anfitrião não apresenta licença municipal especial. Em Amsterdã, o sistema do Airbnb interrompe novas reservas assim que o teto é atingido.
+
+Para hospedar acima desse limite, o anfitrião precisa apresentar a licença ou permissão municipal apropriada, conforme regras locais publicadas pela prefeitura.</div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" href="https://www.airbnb.com.br/help/article/1628" target="_blank" rel="noopener">🔗 Página oficial</a>
+      <button class="btn btn-secondary" onclick="closeModal('modal-reg-ams-lon')">Fechar</button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-reg-geral" class="modal-overlay reg-modal">
+  <div class="modal">
+    <div class="modal-header"><h2>🌐 Que regulamentações se aplicam à minha cidade?</h2><button class="modal-close" onclick="closeModal('modal-reg-geral')">×</button></div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <h4>🎯 Resumo visual</h4>
+        <ul>
+          <li><b>Quem se aplica:</b> qualquer anfitrião — o Airbnb não fornece aconselhamento jurídico.</li>
+          <li><b>O que verificar:</b> leis da cidade, do condado, do estado/província e do país.</li>
+          <li><b>Quando agir:</b> antes de listar o imóvel ou aceitar hóspedes — muitas cidades exigem registro, alvará ou licença prévia.</li>
+          <li><b>Responsabilidade:</b> integralmente do anfitrião, conforme Termos de Serviço.</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>📜 Conteúdo na íntegra (Central de Ajuda Airbnb)</h4>
+        <div class="integra">Como anfitrião do Airbnb, é importante entender as leis da sua cidade, condado, estado, província, território e/ou país. Em muitas cidades, é necessário registrar-se, obter alvará ou licença antes de anunciar a propriedade ou aceitar hóspedes.
+
+Ainda que o Airbnb não preste aconselhamento jurídico, a Central de Ajuda oferece considerações úteis para ajudar a entender leis e regulamentos. Recomenda-se ainda:
+• Verificar as exigências específicas de licenciamento da sua localidade;
+• Consultar profissionais locais de direito e contabilidade;
+• Confirmar obrigações fiscais (renda, ocupação de hotel, ISS, etc.);
+• Conferir restrições condominiais e contratuais;
+• Cumprir normas de segurança (incêndio, sanitárias).
+
+A inclusão de informações nesta página não substitui orientação jurídica especializada e não exime o anfitrião do cumprimento integral da legislação local.</div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" href="https://www.airbnb.com.br/help/article/961" target="_blank" rel="noopener">🔗 Página oficial</a>
+      <button class="btn btn-secondary" onclick="closeModal('modal-reg-geral')">Fechar</button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-reg-neworleans" class="modal-overlay reg-modal">
+  <div class="modal">
+    <div class="modal-header"><h2>🇺🇸 Nova Orleans (LA) — Regulamentação Airbnb</h2><button class="modal-close" onclick="closeModal('modal-reg-neworleans')">×</button></div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <h4>🎯 Resumo visual — duas licenças obrigatórias</h4>
+        <ul>
+          <li><b>OSTR (Operador):</b> permite gerenciar uma ou mais propriedades — exigida de todo anfitrião.</li>
+          <li><b>NSTR (Proprietário — não comercial):</b> imóveis em zona residencial · 1 licença por quadra · US$ 500.</li>
+          <li><b>CSTR (Proprietário — comercial):</b> zonas não residenciais · até 5 quartos · US$ 1.000.</li>
+          <li><b>Antigas:</b> ISTR e RSTR <b>não</b> são mais aceitas.</li>
+          <li><b>Loteria trimestral:</b> quando há múltiplas candidaturas por quadra; vencedores têm 5 dias para pagar.</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>📋 Documentação exigida na candidatura</h4>
+        <ul>
+          <li>Comprovante de treinamento do proprietário.</li>
+          <li>Plantas e planos de evacuação.</li>
+          <li>Plano de redução de ruído.</li>
+          <li>Plano de higienização.</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>💰 Impostos</h4>
+        <p>O Airbnb coleta e repassa impostos de hospedagem automaticamente desde 2017. Anfitriões em outras plataformas são responsáveis pela própria declaração fiscal.</p>
+      </div>
+      <div class="modal-section">
+        <h4>📜 Conteúdo na íntegra (Central de Ajuda Airbnb)</h4>
+        <div class="integra">Anfitriões que oferecem aluguéis por menos de 30 noites em Nova Orleans devem obter duas licenças:
+• OSTR (Operador) — permite gerenciar uma ou mais propriedades;
+• NSTR ou CSTR (Proprietário) — depende do tipo de zona.
+
+Licenças antigas com identificadores ISTR e RSTR não são mais aceitas.
+
+Tipos de licença para o proprietário:
+• NSTR (Não Comercial) — para imóveis em zonas residenciais. Limite de 1 licença por quadra. Custo: US$ 500.
+• CSTR (Comercial) — para zonas não residenciais, permitindo até 5 quartos. Custo: US$ 1.000.
+
+Processo de candidatura: as inscrições devem ser concluídas no momento do envio e exigem comprovante de treinamento do proprietário, plantas e planos de evacuação, plano de redução de ruído e plano de higienização.
+
+Seleção por loteria: quando há múltiplas candidaturas por quadra, as licenças são distribuídas por sorteio trimestral. Vencedores têm 5 dias para efetuar o pagamento.
+
+Impostos: o Airbnb coleta e repassa impostos automaticamente desde 2017. Anfitriões em outras plataformas são responsáveis pela própria declaração fiscal.
+
+Contato: str@nola.gov</div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" href="https://www.airbnb.com.br/help/article/867" target="_blank" rel="noopener">🔗 Página oficial</a>
+      <button class="btn btn-secondary" onclick="closeModal('modal-reg-neworleans')">Fechar</button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-reg-buenosaires" class="modal-overlay reg-modal">
+  <div class="modal">
+    <div class="modal-header"><h2>🇦🇷 Buenos Aires (CABA) — Regulamentação Airbnb</h2><button class="modal-close" onclick="closeModal('modal-reg-buenosaires')">×</button></div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <h4>🎯 Resumo visual</h4>
+        <ul>
+          <li><b>Base legal:</b> Lei nº 6.255 e Resolução ENTUR 8/25 — regulam o Alquiler Temporario Turístico (ATT).</li>
+          <li><b>Definição:</b> hospedagem de turistas de 1 noite a 3 meses.</li>
+          <li><b>Registro:</b> obrigatório no Registro de Imóveis ATT, via sistema TAD (gratuito, virtual).</li>
+          <li><b>Prazo:</b> 180 dias a partir de 1º/fev/2025 para operações já em curso.</li>
+          <li><b>N.º de registro:</b> obrigatório em todos os anúncios e plataformas.</li>
+          <li><b>Seguro:</b> responsabilidade civil obrigatório durante todo o período de uso.</li>
+          <li><b>Hóspedes:</b> registro de nome, nacionalidade, documento e horários — manter por 5 anos.</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>📋 Declarações juramentadas exigidas</h4>
+        <ul>
+          <li>Segurança elétrica certificada por profissional registrado.</li>
+          <li>Instalações de gás natural certificadas.</li>
+          <li>Notificação ao consórcio de coproprietários.</li>
+          <li>Seguro de responsabilidade civil em vigor.</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>📜 Conteúdo na íntegra (Central de Ajuda Airbnb)</h4>
+        <div class="integra">Na Cidade Autônoma de Buenos Aires, a Lei nº 6.255 e a Resolução ENTUR 8/25 regulam a atividade de Alquiler Temporario Turístico (ATT), entendida como a hospedagem de pessoas por períodos que vão de uma noite a um máximo de três meses.
+
+Registro obrigatório no Registro de Imóveis ATT, gratuito, totalmente virtual via sistema TAD. Anfitriões já em operação têm 180 dias a partir de 1º de fevereiro de 2025 para se regularizar. O número de registro deve aparecer em todos os anúncios e plataformas.
+
+Ao registrar, declarações juramentadas exigidas:
+• Segurança elétrica certificada por profissional registrado;
+• Seguro de responsabilidade civil obrigatório (em vigor durante toda a operação);
+• Informações de gás natural certificadas;
+• Notificação ao consórcio de coproprietários.
+
+Registro de hóspedes: o anfitrião deve registrar (em papel ou formato digital) as informações dos visitantes, incluindo nome, nacionalidade, documento de identidade e horários de entrada/saída. Os registros devem ser mantidos por 5 anos.
+
+Segurança da acomodação: kit de primeiros socorros, rotas de evacuação claras, detector de monóxido de carbono e extintor. Verificações regulares das instalações elétricas e de gás. Contatos de emergência acessíveis ao hóspede.
+
+Higienização: o Airbnb recomenda seu protocolo avançado de limpeza e a observância das orientações do governo local sobre desinfecção, produtos aprovados e ventilação.
+
+Seguros: o AirCover oferece proteção básica, mas não substitui o seguro do proprietário. Recomenda-se consultar a seguradora para cobertura adicional de responsabilidade civil.</div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" href="https://www.airbnb.com.br/help/article/2986" target="_blank" rel="noopener">🔗 Página oficial</a>
+      <button class="btn btn-secondary" onclick="closeModal('modal-reg-buenosaires')">Fechar</button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-reg-toronto" class="modal-overlay reg-modal">
+  <div class="modal">
+    <div class="modal-header"><h2>🇨🇦 Toronto — Regulamentação Airbnb (Bylaw PG24.8)</h2><button class="modal-close" onclick="closeModal('modal-reg-toronto')">×</button></div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <h4>🎯 Resumo visual</h4>
+        <ul>
+          <li><b>Definição:</b> STR é aluguel por menos de 28 noites consecutivas.</li>
+          <li><b>Elegibilidade:</b> apenas <b>residência principal</b> do anfitrião — imóveis secundários e de investimento <b>não</b> qualificam.</li>
+          <li><b>Registro:</b> obrigatório junto à Cidade de Toronto · CAD$ 50/ano · renovação anual.</li>
+          <li><b>Número de registro:</b> obrigatório em todos os anúncios.</li>
+          <li><b>Tributo:</b> Municipal Accommodation Tax (MAT) — 4%.</li>
+          <li><b>Limite:</b> casa inteira — máx. 180 noites/ano-calendário. Aluguel só de quarto: sem limite.</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>📋 Obrigações do anfitrião</h4>
+        <ul>
+          <li>Exibir número de registro em todos os anúncios.</li>
+          <li>Fornecer contato de emergência e planos de saída aos hóspedes.</li>
+          <li>Manter registros de aluguel (noites, valores, tipo).</li>
+          <li>Recolher e repassar o MAT de 4%.</li>
+          <li>Apresentar documento oficial com endereço de residência principal (carteira de motorista de Ontário ou ID com foto).</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>📜 Conteúdo na íntegra (Central de Ajuda Airbnb)</h4>
+        <div class="integra">Anfitriões devem se registrar no governo municipal de Toronto para oferecer aluguéis de curta duração (menos de 28 noites). A taxa de registro é de CAD$ 50, com renovação anual.
+
+Elegibilidade: aluguéis de curta duração são permitidos em Toronto se a sua acomodação for sua residência principal. Imóveis secundários e residências de investimento não são elegíveis.
+
+Requisitos principais:
+• Exibir o número de registro em todos os anúncios;
+• Fornecer informações de contato de emergência e planos de saída aos hóspedes;
+• Manter registros do aluguel (noites reservadas, valores das diárias, tipo de aluguel);
+• Coletar e repassar o Municipal Accommodation Tax (MAT) de 4%.
+
+Limites de noites: ao hospedar a casa inteira, há restrição de até 180 noites por ano-calendário. Aluguéis apenas de quarto não têm esse limite.
+
+Documentação: o anfitrião precisa de identificação oficial mostrando o endereço de residência principal (carteira de motorista de Ontário ou ID com foto) além de contato de emergência.
+
+Para detalhes completos, consultar o escritório de Short-Term Rentals de Toronto (ShortTermRentals@toronto.ca) ou um profissional tributário local.</div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" href="https://www.airbnb.com.br/help/article/2158" target="_blank" rel="noopener">🔗 Página oficial</a>
+      <button class="btn btn-secondary" onclick="closeModal('modal-reg-toronto')">Fechar</button>
+    </div>
+  </div>
+</div>
+
 
 <!-- ═══════════════════════════════════════════
      MODALS
@@ -1648,7 +2477,7 @@ function filterAmbito(ambito, btn) {
 }
 function filterCards(gridId, inputId) {
   const q = document.getElementById(inputId).value.toLowerCase();
-  document.querySelectorAll('#' + gridId + ' .card').forEach(c => {
+  document.querySelectorAll('#' + gridId + ' .card, #' + gridId + ' .reg-card').forEach(c => {
     c.style.display = c.textContent.toLowerCase().includes(q) ? '' : 'none';
   });
 }
