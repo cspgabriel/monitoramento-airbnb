@@ -1398,8 +1398,8 @@
   </div>
 
   <div class="summary-grid">
-    <div class="summary-card"><div class="num" style="color:#FF5A5F">10</div><div class="lbl">Locais cobertos</div></div>
-    <div class="summary-card"><div class="num" style="color:#0066CC">5</div><div class="lbl">Países</div></div>
+    <div class="summary-card"><div class="num" style="color:#FF5A5F">13</div><div class="lbl">Locais cobertos</div></div>
+    <div class="summary-card"><div class="num" style="color:#0066CC">7</div><div class="lbl">Países</div></div>
     <div class="summary-card"><div class="num" style="color:#7030A0">4</div><div class="lbl">Modelos regulatórios<br>(licença · tributo · limite · banimento)</div></div>
     <div class="summary-card"><div class="num" style="color:#00766C">100%</div><div class="lbl">Conteúdo oficial Airbnb</div></div>
   </div>
@@ -1554,7 +1554,55 @@
       </div>
     </div>
 
-    <!-- 10. Geral -->
+    <!-- 10. New Orleans -->
+    <div class="reg-card" style="border-left-color:#0066CC">
+      <div class="reg-loc">🇺🇸 EUA · New Orleans, LA</div>
+      <h3>Nova Orleans — Dois níveis de licença (Operador + Proprietário)</h3>
+      <p>Aluguéis de menos de 30 noites exigem <b>duas</b> licenças: OSTR (Operador) + NSTR/CSTR (Proprietário). NSTR (zona residencial): US$ 500, 1 por quadra. CSTR (zona não residencial): US$ 1.000, até 5 quartos. Loteria trimestral quando há disputa por quadra. Antigas ISTR/RSTR <b>não</b> são mais aceitas.</p>
+      <div class="reg-kv">
+        <span><b>Licença:</b> OSTR (operador) + NSTR US$ 500 ou CSTR US$ 1.000</span>
+        <span><b>Tributo:</b> Airbnb recolhe automaticamente desde 2017</span>
+        <span><b>Limite:</b> reservas &lt; 30 noites · 1 NSTR por quadra</span>
+      </div>
+      <div class="reg-footer">
+        <button class="btn btn-primary" onclick="openModal('reg-neworleans')">📖 Ver íntegra</button>
+        <a class="btn btn-secondary" href="https://www.airbnb.com.br/help/article/867" target="_blank" rel="noopener">🔗 Fonte oficial</a>
+      </div>
+    </div>
+
+    <!-- 11. Buenos Aires -->
+    <div class="reg-card" style="border-left-color:#74ACDF">
+      <div class="reg-loc">🇦🇷 Argentina · Buenos Aires (CABA)</div>
+      <h3>Buenos Aires — Registro ATT obrigatório (Lei 6.255)</h3>
+      <p>Lei nº 6255 e Resolução ENTUR 8/25 regulam o Alquiler Temporario Turístico (ATT) — hospedagens de 1 noite a 3 meses. Registro obrigatório no Registro de Imóveis ATT (gratuito, virtual via TAD). Operações em curso têm 180 dias a partir de 1º/fev/2025. Número de registro obrigatório em todos os anúncios.</p>
+      <div class="reg-kv">
+        <span><b>Licença:</b> Registro ATT (gratuito · sistema TAD)</span>
+        <span><b>Seguro:</b> responsabilidade civil obrigatório</span>
+        <span><b>Limite:</b> 1 noite a 3 meses · registro de hóspedes 5 anos</span>
+      </div>
+      <div class="reg-footer">
+        <button class="btn btn-primary" onclick="openModal('reg-buenosaires')">📖 Ver íntegra</button>
+        <a class="btn btn-secondary" href="https://www.airbnb.com.br/help/article/2986" target="_blank" rel="noopener">🔗 Fonte oficial</a>
+      </div>
+    </div>
+
+    <!-- 12. Toronto -->
+    <div class="reg-card" style="border-left-color:#D52B1E">
+      <div class="reg-loc">🇨🇦 Canadá · Toronto</div>
+      <h3>Toronto — Bylaw PG24.8 · Residência principal apenas</h3>
+      <p>STR (menos de 28 noites) só é permitido se o imóvel for a <b>residência principal</b> do anfitrião. Registro municipal obrigatório (CAD$ 50/ano). Casa inteira limitada a 180 noites/ano (aluguel só de quarto não tem limite). Recolhe Municipal Accommodation Tax (MAT) de 4%.</p>
+      <div class="reg-kv">
+        <span><b>Licença:</b> Registro municipal — CAD$ 50/ano</span>
+        <span><b>Tributo:</b> Municipal Accommodation Tax — 4%</span>
+        <span><b>Limite:</b> casa inteira — máx. 180 noites/ano · residência principal</span>
+      </div>
+      <div class="reg-footer">
+        <button class="btn btn-primary" onclick="openModal('reg-toronto')">📖 Ver íntegra</button>
+        <a class="btn btn-secondary" href="https://www.airbnb.com.br/help/article/2158" target="_blank" rel="noopener">🔗 Fonte oficial</a>
+      </div>
+    </div>
+
+    <!-- 13. Geral -->
     <div class="reg-card" style="border-left-color:#7030A0">
       <div class="reg-loc">🌐 Geral · Todos os países</div>
       <h3>Que regulamentações se aplicam à minha cidade?</h3>
@@ -1572,6 +1620,25 @@
 
   </div>
 </section>
+
+<!-- ═══════════════════════════════════════════
+     ACERVO DE DOCUMENTOS
+═══════════════════════════════════════════ -->
+<section id="acervo" class="section">
+  <p class="section-intro">Acervo documental completo do repositório: <b>143 arquivos</b> (PDF, DOCX, XLSX e PPTX) entre legislação federal e municipal, decisões judiciais, projetos de lei, análises, clippings nacionais e internacionais e os materiais brutos do SharePoint da ABIH-RJ. Clique para abrir o documento original.</p>
+
+  <div class="filter-bar">
+    <input type="text" id="search-acervo" placeholder="Buscar documento por nome, categoria ou tema…" oninput="renderAcervo(this.value)">
+    <button class="pill-btn on" onclick="filterAcervoCat('',this)">Tudo</button>
+    <button class="pill-btn" onclick="filterAcervoCat('Legislação',this)">Legislação</button>
+    <button class="pill-btn" onclick="filterAcervoCat('Clipping',this)">Clippings</button>
+    <button class="pill-btn" onclick="filterAcervoCat('Material SharePoint',this)">SharePoint</button>
+  </div>
+
+  <div id="acervo-container"></div>
+</section>
+
+</div><!-- /container -->
 
 <!-- ═══════════════════════════════════════════
      MODAIS — REGULAÇÃO AIRBNB
@@ -1970,24 +2037,165 @@ A inclusão de informações nesta página não substitui orientação jurídica
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════
-     ACERVO DE DOCUMENTOS
-═══════════════════════════════════════════ -->
-<section id="acervo" class="section">
-  <p class="section-intro">Acervo documental completo do repositório: <b>143 arquivos</b> (PDF, DOCX, XLSX e PPTX) entre legislação federal e municipal, decisões judiciais, projetos de lei, análises, clippings nacionais e internacionais e os materiais brutos do SharePoint da ABIH-RJ. Clique para abrir o documento original.</p>
+<div id="modal-reg-neworleans" class="modal-overlay reg-modal">
+  <div class="modal">
+    <div class="modal-header"><h2>🇺🇸 Nova Orleans (LA) — Regulamentação Airbnb</h2><button class="modal-close" onclick="closeModal('modal-reg-neworleans')">×</button></div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <h4>🎯 Resumo visual — duas licenças obrigatórias</h4>
+        <ul>
+          <li><b>OSTR (Operador):</b> permite gerenciar uma ou mais propriedades — exigida de todo anfitrião.</li>
+          <li><b>NSTR (Proprietário — não comercial):</b> imóveis em zona residencial · 1 licença por quadra · US$ 500.</li>
+          <li><b>CSTR (Proprietário — comercial):</b> zonas não residenciais · até 5 quartos · US$ 1.000.</li>
+          <li><b>Antigas:</b> ISTR e RSTR <b>não</b> são mais aceitas.</li>
+          <li><b>Loteria trimestral:</b> quando há múltiplas candidaturas por quadra; vencedores têm 5 dias para pagar.</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>📋 Documentação exigida na candidatura</h4>
+        <ul>
+          <li>Comprovante de treinamento do proprietário.</li>
+          <li>Plantas e planos de evacuação.</li>
+          <li>Plano de redução de ruído.</li>
+          <li>Plano de higienização.</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>💰 Impostos</h4>
+        <p>O Airbnb coleta e repassa impostos de hospedagem automaticamente desde 2017. Anfitriões em outras plataformas são responsáveis pela própria declaração fiscal.</p>
+      </div>
+      <div class="modal-section">
+        <h4>📜 Conteúdo na íntegra (Central de Ajuda Airbnb)</h4>
+        <div class="integra">Anfitriões que oferecem aluguéis por menos de 30 noites em Nova Orleans devem obter duas licenças:
+• OSTR (Operador) — permite gerenciar uma ou mais propriedades;
+• NSTR ou CSTR (Proprietário) — depende do tipo de zona.
 
-  <div class="filter-bar">
-    <input type="text" id="search-acervo" placeholder="Buscar documento por nome, categoria ou tema…" oninput="renderAcervo(this.value)">
-    <button class="pill-btn on" onclick="filterAcervoCat('',this)">Tudo</button>
-    <button class="pill-btn" onclick="filterAcervoCat('Legislação',this)">Legislação</button>
-    <button class="pill-btn" onclick="filterAcervoCat('Clipping',this)">Clippings</button>
-    <button class="pill-btn" onclick="filterAcervoCat('Material SharePoint',this)">SharePoint</button>
+Licenças antigas com identificadores ISTR e RSTR não são mais aceitas.
+
+Tipos de licença para o proprietário:
+• NSTR (Não Comercial) — para imóveis em zonas residenciais. Limite de 1 licença por quadra. Custo: US$ 500.
+• CSTR (Comercial) — para zonas não residenciais, permitindo até 5 quartos. Custo: US$ 1.000.
+
+Processo de candidatura: as inscrições devem ser concluídas no momento do envio e exigem comprovante de treinamento do proprietário, plantas e planos de evacuação, plano de redução de ruído e plano de higienização.
+
+Seleção por loteria: quando há múltiplas candidaturas por quadra, as licenças são distribuídas por sorteio trimestral. Vencedores têm 5 dias para efetuar o pagamento.
+
+Impostos: o Airbnb coleta e repassa impostos automaticamente desde 2017. Anfitriões em outras plataformas são responsáveis pela própria declaração fiscal.
+
+Contato: str@nola.gov</div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" href="https://www.airbnb.com.br/help/article/867" target="_blank" rel="noopener">🔗 Página oficial</a>
+      <button class="btn btn-secondary" onclick="closeModal('modal-reg-neworleans')">Fechar</button>
+    </div>
   </div>
+</div>
 
-  <div id="acervo-container"></div>
-</section>
+<div id="modal-reg-buenosaires" class="modal-overlay reg-modal">
+  <div class="modal">
+    <div class="modal-header"><h2>🇦🇷 Buenos Aires (CABA) — Regulamentação Airbnb</h2><button class="modal-close" onclick="closeModal('modal-reg-buenosaires')">×</button></div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <h4>🎯 Resumo visual</h4>
+        <ul>
+          <li><b>Base legal:</b> Lei nº 6.255 e Resolução ENTUR 8/25 — regulam o Alquiler Temporario Turístico (ATT).</li>
+          <li><b>Definição:</b> hospedagem de turistas de 1 noite a 3 meses.</li>
+          <li><b>Registro:</b> obrigatório no Registro de Imóveis ATT, via sistema TAD (gratuito, virtual).</li>
+          <li><b>Prazo:</b> 180 dias a partir de 1º/fev/2025 para operações já em curso.</li>
+          <li><b>N.º de registro:</b> obrigatório em todos os anúncios e plataformas.</li>
+          <li><b>Seguro:</b> responsabilidade civil obrigatório durante todo o período de uso.</li>
+          <li><b>Hóspedes:</b> registro de nome, nacionalidade, documento e horários — manter por 5 anos.</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>📋 Declarações juramentadas exigidas</h4>
+        <ul>
+          <li>Segurança elétrica certificada por profissional registrado.</li>
+          <li>Instalações de gás natural certificadas.</li>
+          <li>Notificação ao consórcio de coproprietários.</li>
+          <li>Seguro de responsabilidade civil em vigor.</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>📜 Conteúdo na íntegra (Central de Ajuda Airbnb)</h4>
+        <div class="integra">Na Cidade Autônoma de Buenos Aires, a Lei nº 6.255 e a Resolução ENTUR 8/25 regulam a atividade de Alquiler Temporario Turístico (ATT), entendida como a hospedagem de pessoas por períodos que vão de uma noite a um máximo de três meses.
 
-</div><!-- /container -->
+Registro obrigatório no Registro de Imóveis ATT, gratuito, totalmente virtual via sistema TAD. Anfitriões já em operação têm 180 dias a partir de 1º de fevereiro de 2025 para se regularizar. O número de registro deve aparecer em todos os anúncios e plataformas.
+
+Ao registrar, declarações juramentadas exigidas:
+• Segurança elétrica certificada por profissional registrado;
+• Seguro de responsabilidade civil obrigatório (em vigor durante toda a operação);
+• Informações de gás natural certificadas;
+• Notificação ao consórcio de coproprietários.
+
+Registro de hóspedes: o anfitrião deve registrar (em papel ou formato digital) as informações dos visitantes, incluindo nome, nacionalidade, documento de identidade e horários de entrada/saída. Os registros devem ser mantidos por 5 anos.
+
+Segurança da acomodação: kit de primeiros socorros, rotas de evacuação claras, detector de monóxido de carbono e extintor. Verificações regulares das instalações elétricas e de gás. Contatos de emergência acessíveis ao hóspede.
+
+Higienização: o Airbnb recomenda seu protocolo avançado de limpeza e a observância das orientações do governo local sobre desinfecção, produtos aprovados e ventilação.
+
+Seguros: o AirCover oferece proteção básica, mas não substitui o seguro do proprietário. Recomenda-se consultar a seguradora para cobertura adicional de responsabilidade civil.</div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" href="https://www.airbnb.com.br/help/article/2986" target="_blank" rel="noopener">🔗 Página oficial</a>
+      <button class="btn btn-secondary" onclick="closeModal('modal-reg-buenosaires')">Fechar</button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-reg-toronto" class="modal-overlay reg-modal">
+  <div class="modal">
+    <div class="modal-header"><h2>🇨🇦 Toronto — Regulamentação Airbnb (Bylaw PG24.8)</h2><button class="modal-close" onclick="closeModal('modal-reg-toronto')">×</button></div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <h4>🎯 Resumo visual</h4>
+        <ul>
+          <li><b>Definição:</b> STR é aluguel por menos de 28 noites consecutivas.</li>
+          <li><b>Elegibilidade:</b> apenas <b>residência principal</b> do anfitrião — imóveis secundários e de investimento <b>não</b> qualificam.</li>
+          <li><b>Registro:</b> obrigatório junto à Cidade de Toronto · CAD$ 50/ano · renovação anual.</li>
+          <li><b>Número de registro:</b> obrigatório em todos os anúncios.</li>
+          <li><b>Tributo:</b> Municipal Accommodation Tax (MAT) — 4%.</li>
+          <li><b>Limite:</b> casa inteira — máx. 180 noites/ano-calendário. Aluguel só de quarto: sem limite.</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>📋 Obrigações do anfitrião</h4>
+        <ul>
+          <li>Exibir número de registro em todos os anúncios.</li>
+          <li>Fornecer contato de emergência e planos de saída aos hóspedes.</li>
+          <li>Manter registros de aluguel (noites, valores, tipo).</li>
+          <li>Recolher e repassar o MAT de 4%.</li>
+          <li>Apresentar documento oficial com endereço de residência principal (carteira de motorista de Ontário ou ID com foto).</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>📜 Conteúdo na íntegra (Central de Ajuda Airbnb)</h4>
+        <div class="integra">Anfitriões devem se registrar no governo municipal de Toronto para oferecer aluguéis de curta duração (menos de 28 noites). A taxa de registro é de CAD$ 50, com renovação anual.
+
+Elegibilidade: aluguéis de curta duração são permitidos em Toronto se a sua acomodação for sua residência principal. Imóveis secundários e residências de investimento não são elegíveis.
+
+Requisitos principais:
+• Exibir o número de registro em todos os anúncios;
+• Fornecer informações de contato de emergência e planos de saída aos hóspedes;
+• Manter registros do aluguel (noites reservadas, valores das diárias, tipo de aluguel);
+• Coletar e repassar o Municipal Accommodation Tax (MAT) de 4%.
+
+Limites de noites: ao hospedar a casa inteira, há restrição de até 180 noites por ano-calendário. Aluguéis apenas de quarto não têm esse limite.
+
+Documentação: o anfitrião precisa de identificação oficial mostrando o endereço de residência principal (carteira de motorista de Ontário ou ID com foto) além de contato de emergência.
+
+Para detalhes completos, consultar o escritório de Short-Term Rentals de Toronto (ShortTermRentals@toronto.ca) ou um profissional tributário local.</div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" href="https://www.airbnb.com.br/help/article/2158" target="_blank" rel="noopener">🔗 Página oficial</a>
+      <button class="btn btn-secondary" onclick="closeModal('modal-reg-toronto')">Fechar</button>
+    </div>
+  </div>
+</div>
+
 
 <!-- ═══════════════════════════════════════════
      MODALS
